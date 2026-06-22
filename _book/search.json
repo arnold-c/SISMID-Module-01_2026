@@ -724,5 +724,93 @@
     "crumbs": [
       "**References**"
     ]
+  },
+  {
+    "objectID": "day-1-interactive-session.html",
+    "href": "day-1-interactive-session.html",
+    "title": "\n5  Compartmental Diagram Interactive Session\n",
+    "section": "",
+    "text": "5.1 Learning goals\nIn this session, you will start with a simple SIR model diagram and modify it to represent an intervention or transmission process that is interesting to your group. The goal is not to make the most complicated model possible. Instead, the goal is to make each modeling choice explicit: what compartments are needed, what flows connect them, and what assumptions those flows imply.\nBy the end of this session, you should be able to:",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Compartmental Diagram Interactive Session</span>"
+    ]
+  },
+  {
+    "objectID": "day-1-interactive-session.html#learning-goals",
+    "href": "day-1-interactive-session.html#learning-goals",
+    "title": "\n5  Compartmental Diagram Interactive Session\n",
+    "section": "",
+    "text": "understand how to translate a public-health intervention into a compartment model structure;\nidentify the states, flows, and parameters in that structure;\nexplain which assumptions are introduced by adding or removing arrows; and\ndescribe the expected qualitative effect of the intervention on epidemic dynamics.",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Compartmental Diagram Interactive Session</span>"
+    ]
+  },
+  {
+    "objectID": "day-1-interactive-session.html#setup",
+    "href": "day-1-interactive-session.html#setup",
+    "title": "\n5  Compartmental Diagram Interactive Session\n",
+    "section": "\n5.2 Setup",
+    "text": "5.2 Setup\nWe will use the diagram package to draw box-and-arrow compartment diagrams, as in Section 6.6.1.2, and the purrr package to create uniform compartment boxes.\n\nCodelibrary(diagram)\nlibrary(purrr)",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Compartmental Diagram Interactive Session</span>"
+    ]
+  },
+  {
+    "objectID": "day-1-interactive-session.html#starting-point-a-simple-sir-diagram",
+    "href": "day-1-interactive-session.html#starting-point-a-simple-sir-diagram",
+    "title": "\n5  Compartmental Diagram Interactive Session\n",
+    "section": "\n5.3 Starting point: a simple SIR diagram",
+    "text": "5.3 Starting point: a simple SIR diagram\nThe basic SIR model has three compartments:\n\n\n\\(S\\): susceptible individuals;\n\n\\(I\\): infectious individuals; and\n\n\\(R\\): recovered or removed individuals.\n\n\n\n\n\n\n\n\n\nFor the standard SIR model, infection moves people from \\(S\\) to \\(I\\) at rate \\(\\lambda\\), and recovery or removal moves people from \\(I\\) to \\(R\\) at rate \\(\\gamma\\).",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Compartmental Diagram Interactive Session</span>"
+    ]
+  },
+  {
+    "objectID": "day-1-interactive-session.html#group-activity",
+    "href": "day-1-interactive-session.html#group-activity",
+    "title": "\n5  Compartmental Diagram Interactive Session\n",
+    "section": "\n5.4 Group activity",
+    "text": "5.4 Group activity\nChoose one intervention or modeling feature that your group wants to represent. Then change the SIR diagram to include it.\nExamples include:\n\nvaccination;\nisolation or quarantine;\nmasking or behavior change;\nwaning immunity;\nbirths and deaths;\ntreatment;\nage groups or other risk groups; or\nany intervention relevant to your own research area.\n\nFor your modified model, prepare a short explanation of:\n\nwhich compartments you added or removed;\nwhich arrows you added or removed;\nwhat parameter or rate each new arrow represents;\nwhat assumptions the new structure makes; and\nwhat qualitative effect you expect the intervention to have on the epidemic curve.",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Compartmental Diagram Interactive Session</span>"
+    ]
+  },
+  {
+    "objectID": "day-1-interactive-session.html#example-adding-vaccination",
+    "href": "day-1-interactive-session.html#example-adding-vaccination",
+    "title": "\n5  Compartmental Diagram Interactive Session\n",
+    "section": "\n5.5 Example: adding vaccination",
+    "text": "5.5 Example: adding vaccination\nOne simple way to represent vaccination is to add a flow from \\(S\\) to \\(R\\). This assumes vaccination gives protection similar to recovery or removal. That is a strong assumption, but it is a useful starting point.\n\n\n\n\n\n\n\n\nIn this example, \\(v\\) is the vaccination rate. Before writing equations, ask what this diagram assumes. For example, does vaccination work immediately? Does everyone have the same access to vaccination? Is vaccine protection perfect? Does protection wane?",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Compartmental Diagram Interactive Session</span>"
+    ]
+  },
+  {
+    "objectID": "day-1-interactive-session.html#template-for-your-diagram",
+    "href": "day-1-interactive-session.html#template-for-your-diagram",
+    "title": "\n5  Compartmental Diagram Interactive Session\n",
+    "section": "\n5.6 Template for your diagram",
+    "text": "5.6 Template for your diagram\nYou can copy and modify this code chunk to make your own diagram. Add compartments to elpos, add arrows to fromto, and label any new rates.\n\nCode# Define the locations of each compartment.\n# Each row is one compartment, and the two numbers give its x- and\n# y-position before scaling.\nelpos &lt;- rbind(\n  S = c(1, 1),\n  I = c(2, 1),\n  R = c(3, 1)\n)\n\n# Rescale the compartment positions so they fit inside the plotting area.\nelpos[, 1] &lt;- (2 * elpos[, 1] - 1) / 6\nelpos[, 2] &lt;- 0.5\n\n# Define the arrows between compartments.\n# The numbers refer to row positions in elpos, so SI = c(1, 2) draws an\n# arrow from the first row, S, to the second row, I.\nfromto &lt;- rbind(\n  SI = c(1, 2),\n  IR = c(2, 3)\n)\n\n# Set small plot margins and open a blank plotting area for the diagram.\nop &lt;- par(mar = c(1, 1, 1, 1))\ndiagram::openplotmat(asp = 0.35)\n\n# Draw one arrow for each row in fromto.\nfor (i in seq_len(nrow(fromto))) {\n  diagram::straightarrow(\n    to = elpos[fromto[i, 2], ],\n    from = elpos[fromto[i, 1], ],\n    lwd = 2,\n    arr.pos = 0.65,\n    arr.length = 0.5\n  )\n}\n\n# Draw a labeled box for each compartment.\npurrr::walk(\n  rownames(elpos),\n  .f = function(.x) {\n    diagram::textrect(\n      elpos[.x, ],\n      0.08,\n      0.10,\n      lab = .x,\n      box.col = gray(0.7),\n      shadow.col = gray(0.4),\n      shadow.size = 0.01,\n      cex = 2\n    )\n  }\n)\n\n# Label the arrows with the rates that move individuals between states.\n# Adjust the x- and y-positions if you add new compartments or arrows.\ntext(mean(elpos[c(\"S\", \"I\"), 1]), 0.62, expression(lambda), cex = 1.8)\ntext(mean(elpos[c(\"I\", \"R\"), 1]), 0.62, expression(gamma), cex = 1.8)\n\n# Restore the previous plotting settings.\npar(op)",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Compartmental Diagram Interactive Session</span>"
+    ]
+  },
+  {
+    "objectID": "day-1-interactive-session.html#deliverable",
+    "href": "day-1-interactive-session.html#deliverable",
+    "title": "\n5  Compartmental Diagram Interactive Session\n",
+    "section": "\n5.7 Deliverable",
+    "text": "5.7 Deliverable\nEach group should be ready to share:\n\none modified box-and-arrow diagram;\na list of the model states;\na list of the model flows and parameters;\none or two key assumptions implied by the diagram; and\none prediction for how the intervention changes the epidemic trajectory.",
+    "crumbs": [
+      "Day 1",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Compartmental Diagram Interactive Session</span>"
+    ]
   }
 ]

@@ -26,6 +26,7 @@ book:
         - L02_sir-basics.qmd
         - r-session-01.qmd
         - L03_hit-and-vaccinations.qmd
+        - day-1-interactive-session.qmd
     - part: "Day 2"
       chapters:
         - L05_age-structure.qmd
