@@ -748,8 +748,10 @@ What happens if one or both of the other unknowns ($S_0$ and $I_0$) is fixed ins
 
 ### Exercise 1
 
+<details>
+<summary>Show solutions</summary>
+
 ```{r}
-#| code-fold: true
 p_infec <- (seq(0, 1, by = 0.001))
 r0_p <- (log(1 - p_infec)) / (-p_infec)
 plot(
@@ -761,10 +763,14 @@ plot(
 )
 ```
 
+</details>
+
 ### Exercise 2
 
+<details>
+<summary>Show solutions</summary>
+
 ```{r}
-#| code-fold: true
 #A: If the cases were isolated after 24 hours, then gamma would be 1/1 = 1, and if the cases were isolated after 12 hours, gamma would be 1/0.5 = 2. R0 would be calculated as the beta coefficient over gamma, below:
 
 r0_g1 <- 1.094913 / 1 + 1
@@ -774,10 +780,14 @@ r0_g2 <- 1.094913 / 2 + 1
 r0_g2
 ```
 
+</details>
+
 ### Exercise 3
 
+<details>
+<summary>Show solutions</summary>
+
 ```{r}
-#| code-fold: true
 niamey[5, 3] <- 0 #replace a "NA"
 #the command below organizes the data so it can be plotted and analyzed
 niamey <- data.frame(
@@ -790,8 +800,6 @@ niamey <- data.frame(
 ```
 
 ```{r}
-#| code-fold: true
-
 # First let's see what the outbreak looks like for the first community on a linear scale
 plot(
   niamey$biweek[niamey$site == 1],
@@ -805,8 +813,6 @@ lines(niamey$biweek[niamey$site == 1], niamey$cases[niamey$site == 1])
 ```
 
 ```{r}
-#| code-fold: true
-
 # Now let’s try it on a log scale to see until when the outbreak is roughly linear
 plot(
   niamey$biweek[niamey$site == 1],
@@ -821,7 +827,6 @@ lines(niamey$biweek[niamey$site == 1], niamey$cases[niamey$site == 1])
 ```
 
 ```{r}
-#| code-fold: true
 # here we create a "week" variable to run the analysis on a weekly
 niamey$week <- niamey$biweek * 2
 # we use the `head` command to take the first N values of a vector. In this case, we're taking the first 10 values of our outcome (cases) and predictor (time) variables.
@@ -833,7 +838,6 @@ summary(model) #summary statistics for fit model
 ```
 
 ```{r}
-#| code-fold: true
 # Now let's get the slope and display it
 slope <- coef(model)[2] #extract slope parameter
 slope #print to screen
@@ -841,12 +845,16 @@ slope #print to screen
 
 As we ran the model by weeks, the $\gamma$ value is $2^{-1}$ and $\hat R_0 = \hat \beta_1 / \gamma +1$ giving $\hat R_0=0.2196041/0.5+1 \approx 1.44$.
 
+</details>
+
 ### Exercise 4
+
+<details>
+<summary>Show solutions</summary>
 
 Here, we can use a loop and repeat the regression procedure we used above for varying numbers of initial data points in our model.
 
 ```{r}
-#| code-fold: true
 slope <- NULL
 se <- NULL
 for (i in 3:18) {
@@ -861,7 +869,12 @@ R0 <- slope / 0.5 + 1
 plot(R0, se, ylab = 'Standard error')
 ```
 
+</details>
+
 ### Exercise 5
+
+<details>
+<summary>Show solutions</summary>
 
 First, let's add in $\gamma$ estimation into the `sse.sir` function and create a new `sse.sir` function called `sse.sir.g`
 
@@ -1134,7 +1147,6 @@ ggplot(niamey_predictions_g, aes(x = biweek, group = site)) +
 ```
 
 ```{r}
-#| code-fold: true
 #| echo: false
 #| eval: false
 closed.sir.model.g <- function(t, x, params) {
@@ -1169,7 +1181,6 @@ sse.sir.g <- function(params0, data, site) {
 ```
 
 ```{r}
-#| code-fold: true
 #| echo: false
 #| eval: false
 params0 <- c(-3.2, 7.3, -2.6, log(14 / 365)) # initial guess
@@ -1185,7 +1196,6 @@ exp(fit3.g$par) #back-transform parameters
 ```
 
 ```{r}
-#| code-fold: true
 #| echo: false
 #| eval: false
 par(mfrow = c(2, 2)) #set up plotting area for multiple panels
@@ -1225,354 +1235,141 @@ mod.pred.g3 <- as.data.frame(ode(
 lines(mod.pred.g3$Y ~ subset(niamey, site == 3)[, 1])
 ```
 
+</details>
+
 ### Exercise 6
+
+<details>
+<summary>Show solutions</summary>
 
 What happens if one or both of the other unknowns ($X_0$ and $Y_0$) is fixed instead of $\gamma$?
 
-#### Solutions coming soon!
-
-First we modify the `sse_sir_g` function again to fix $X_0$ and $Y_0$ (or both)
+First we modify the `sse_sir_g` function so that the fixed initial
+condition values are supplied separately from the parameters optimized by
+`optim()`.
+Here we fix $S_0 = 5000$ and/or $I_0 = 1$, the same values used as starting
+values in the previous exercise.
 
 ```{r}
-#| code-fold: true
-#| echo: false
-#| eval: false
-# fix S0
-sse_sir_S0 <- function(params, data) {
-  # Convert biweekly time series into annual time scale
-  # Daily time scale has requires beta values to be too small - doesn't
-  # optimize well
+sse_sir_fixed_init <- function(params, data, fixed_init) {
   dt <- 0.01
   max_biweek <- max(data$biweek)
   t <- seq(0, max_biweek * 14, dt) / 365
 
-  # Extract the number of observed incidence
   obs_inc <- data$cases
 
-  # Note the parameters are updated throughout the optimization process by
-  # the optim() function
-  # Unpack the transmission parameter and exponentiate to fit on ln scale
-  beta <- exp(params[["beta"]])
-  gamma <- exp(params[["gamma"]])
-
-  in_parms <- c("beta" = beta, "gamma" = gamma)
-  # Unpack the initial states and exponentiate to fit on normal scale
-  S_init <- exp(12500) #initial susceptibles (FIXED)
-  I_init <- exp(params[["I_init"]])
-
-  # Fit SIR model to the parameters
-  sol <- deSolve::ode(
-    y = c(I = I_init, new_inf = 0),
-    times = t,
-    func = closed_sir_model_g,
-    parms = in_parms,
-    # Use rk4 as fixed time steps, which is important for indexing
-    method = "rk4"
+  model_values <- c(exp(params), fixed_init)
+  in_parms <- c(
+    beta = model_values[["beta"]],
+    gamma = model_values[["gamma"]]
   )
+  S_init <- model_values[["S_init"]]
+  I_init <- model_values[["I_init"]]
 
-  # Extract the cumulative incidence
-  cum_inc <- sol[, "new_inf"]
-
-  # Find the indices of the cumulative incidence to extract
-  biweek_index <- seq(1, max_biweek) * (14 / dt) + 1
-
-  # Index cumulative incidence to get the values at the end of the biweeks
-  biweek_cum_inc <- cum_inc[biweek_index]
-
-  # Calculate the biweekly incidence by using the difference between
-  # consecutive biweeks. Need to manually prepend first week's incidence
-  # and add in the initial number of infectious individuals, as ODE model
-  # only returns the cumulative differences, which is 0 at the start.
-  biweek_inc <- c(biweek_cum_inc[1] + I_init, diff(biweek_cum_inc, lag = 1))
-
-  # return SSE of predicted vs observed incidence
-  return(sum((biweek_inc - obs_inc)^2))
-}
-
-#fix I0
-sse_sir_I0 <- function(params, data) {
-  # Convert biweekly time series into annual time scale
-  # Daily time scale has requires beta values to be too small - doesn't
-  # optimize well
-  dt <- 0.01
-  max_biweek <- max(data$biweek)
-  t <- seq(0, max_biweek * 14, dt) / 365
-
-  # Extract the number of observed incidence
-  obs_inc <- data$cases
-
-  # Note the parameters are updated throughout the optimization process by
-  # the optim() function
-  # Unpack the transmission parameter and exponentiate to fit on ln scale
-  beta <- exp(params[["beta"]])
-  gamma <- exp(params[["gamma"]])
-
-  in_parms <- c("beta" = beta, "gamma" = gamma)
-  # Unpack the initial states and exponentiate to fit on normal scale
-  S_init <- exp(params[["S_init"]])
-  I_init <- exp(1000) # initial infecteds (FIXED)
-
-  # Fit SIR model to the parameters
   sol <- deSolve::ode(
     y = c(S = S_init, I = I_init, new_inf = 0),
     times = t,
     func = closed_sir_model_g,
     parms = in_parms,
-    # Use rk4 as fixed time steps, which is important for indexing
     method = "rk4"
   )
 
-  # Extract the cumulative incidence
   cum_inc <- sol[, "new_inf"]
-
-  # Find the indices of the cumulative incidence to extract
   biweek_index <- seq(1, max_biweek) * (14 / dt) + 1
-
-  # Index cumulative incidence to get the values at the end of the biweeks
   biweek_cum_inc <- cum_inc[biweek_index]
-
-  # Calculate the biweekly incidence by using the difference between
-  # consecutive biweeks. Need to manually prepend first week's incidence
-  # and add in the initial number of infectious individuals, as ODE model
-  # only returns the cumulative differences, which is 0 at the start.
   biweek_inc <- c(biweek_cum_inc[1] + I_init, diff(biweek_cum_inc, lag = 1))
 
-  # return SSE of predicted vs observed incidence
-  return(sum((biweek_inc - obs_inc)^2))
-}
-
-# fix S0 and I0
-sse_sir_S0_I0 <- function(params, data) {
-  # Convert biweekly time series into annual time scale
-  # Daily time scale has requires beta values to be too small - doesn't
-  # optimize well
-  dt <- 0.01
-  max_biweek <- max(data$biweek)
-  t <- seq(0, max_biweek * 14, dt) / 365
-
-  # Extract the number of observed incidence
-  obs_inc <- data$cases
-
-  # Note the parameters are updated throughout the optimization process by
-  # the optim() function
-  # Unpack the transmission parameter and exponentiate to fit on ln scale
-  beta <- exp(params[["beta"]])
-  gamma <- exp(params[["gamma"]])
-
-  in_parms <- c("beta" = beta, "gamma" = gamma)
-  # Unpack the initial states and exponentiate to fit on normal scale
-  S_init <- exp(12500) # initial susceptibles (FIXED)
-  I_init <- exp(1000) # initial infecteds (FIXED)
-
-  # Fit SIR model to the parameters
-  sol <- deSolve::ode(
-    y = c(S = S_init, I = I_init, new_inf = 0),
-    times = t,
-    func = closed_sir_model_g,
-    parms = in_parms,
-    # Use rk4 as fixed time steps, which is important for indexing
-    method = "rk4"
-  )
-
-  # Extract the cumulative incidence
-  cum_inc <- sol[, "new_inf"]
-
-  # Find the indices of the cumulative incidence to extract
-  biweek_index <- seq(1, max_biweek) * (14 / dt) + 1
-
-  # Index cumulative incidence to get the values at the end of the biweeks
-  biweek_cum_inc <- cum_inc[biweek_index]
-
-  # Calculate the biweekly incidence by using the difference between
-  # consecutive biweeks. Need to manually prepend first week's incidence
-  # and add in the initial number of infectious individuals, as ODE model
-  # only returns the cumulative differences, which is 0 at the start.
-  biweek_inc <- c(biweek_cum_inc[1] + I_init, diff(biweek_cum_inc, lag = 1))
-
-  # return SSE of predicted vs observed incidence
-  return(sum((biweek_inc - obs_inc)^2))
+  sum((biweek_inc - obs_inc)^2)
 }
 ```
 
-Now we can run the optim algorithm and find the best parameters for the SIR model for each of the scenario.
-
-First, for S0 fixed:
+Now we can fit three versions of the model: one with $S_0$ fixed, one with
+$I_0$ fixed, and one with both initial conditions fixed.
 
 ```{r}
-#| code-fold: true
-#| echo: false
-#| eval: false
-sse_optim_params_S0 <- c(
-  beta = log(0.055),
-  gamma = log(365 / 14),
-  I_init = log(1)
+fit_fixed_init_model <- function(start_params, fixed_init) {
+  results <- niamey_df %>%
+    nest(data = -site) %>%
+    mutate(
+      fit = map(
+        data,
+        ~ optim(
+          par = start_params,
+          fn = sse_sir_fixed_init,
+          data = .x,
+          fixed_init = fixed_init
+        )
+      ),
+      map_dfr(fit, ~ exp(.x$par)),
+      sse = map_dbl(fit, "value")
+    )
+
+  if (!"S_init" %in% names(results)) {
+    results <- mutate(results, S_init = fixed_init[["S_init"]])
+  }
+
+  if (!"I_init" %in% names(results)) {
+    results <- mutate(results, I_init = fixed_init[["I_init"]])
+  }
+
+  results
+}
+
+fixed_init_results <- bind_rows(
+  `S0 fixed` = fit_fixed_init_model(
+    start_params = c(
+      beta = log(0.055),
+      gamma = log(365 / 14),
+      I_init = log(1)
+    ),
+    fixed_init = c(S_init = 5000)
+  ),
+  `I0 fixed` = fit_fixed_init_model(
+    start_params = c(
+      beta = log(0.055),
+      gamma = log(365 / 14),
+      S_init = log(5000)
+    ),
+    fixed_init = c(I_init = 1)
+  ),
+  `S0 and I0 fixed` = fit_fixed_init_model(
+    start_params = c(
+      beta = log(0.055),
+      gamma = log(365 / 14)
+    ),
+    fixed_init = c(S_init = 5000, I_init = 1)
+  ),
+  .id = "scenario"
 )
-
-# Create a dataframe of optimized parameters
-niamey_optims_S0 <- niamey_df %>%
-  # Create a nested dataframe i.e. one row for each site, and the data column
-  # now is a list column that contains a separate dataframe of times and
-  # cases for each site
-  nest(data = -site) %>%
-  mutate(
-    # Map the optim() function call to each of the separate dataframes
-    # stored in the nested data column we just created
-    fit = map(data, ~ optim(sse_optim_params_S0, sse_sir_S0, data = .x)),
-    # Map the exp() function to each of the model fits just created, and
-    # output to a dataframe instead of a list (like in map()), for easier
-    # use in the plottinge predictions later
-    map_dfr(fit, ~ exp(.x$par))
-  )
 ```
 
-Second, for I0 fixed:
+The optimized parameters are:
 
 ```{r}
-#| code-fold: true
-#| echo: false
-#| eval: false
-sse_optim_params_I0 <- c(
-  beta = log(0.055),
-  gamma = log(365 / 14),
-  S_init = log(5000),
-  I_init = log(1)
-)
-
-# Create a dataframe of optimized parameters
-niamey_optims_I0 <- niamey_df %>%
-  # Create a nested dataframe i.e. one row for each site, and the data column
-  # now is a list column that contains a separate dataframe of times and
-  # cases for each site
-  nest(data = -site) %>%
-  mutate(
-    # Map the optim() function call to each of the separate dataframes
-    # stored in the nested data column we just created
-    fit = map(data, ~ optim(sse_optim_params_I0, sse_sir_I0, data = .x)),
-    # Map the exp() function to each of the model fits just created, and
-    # output to a dataframe instead of a list (like in map()), for easier
-    # use in the plottinge predictions later
-    map_dfr(fit, ~ exp(.x$par))
-  )
+fixed_init_results %>%
+  select(scenario, site, beta, gamma, S_init, I_init, sse) %>%
+  mutate(site = str_replace_all(site, "_", " ")) %>%
+  gt(groupname_col = "scenario") %>%
+  fmt_number(columns = c(gamma, S_init, I_init, sse), decimals = 2) %>%
+  fmt_scientific(columns = beta, decimals = 3) %>%
+  cols_label(
+    site = md("**Site**"),
+    beta = md("**Beta**"),
+    gamma = md("**Gamma**"),
+    S_init = md("**Initial S**"),
+    I_init = md("**Initial I**"),
+    sse = md("**SSE**")
+  ) %>%
+  opt_stylize(style = 1, color = "gray") %>%
+  opt_horizontal_padding(scale = 3) %>%
+  cols_align("center")
 ```
 
-Third, for fixing both S0 and I0:
+Fixing either $S_0$ or $I_0$ reduces the number of free parameters, so the
+remaining parameters must compensate for any mismatch between the fixed value
+and the data.
+Fixing both initial conditions is the most restrictive option: it is easier to
+interpret, but it usually gives a worse fit than estimating both initial
+conditions from the outbreak data.
 
-```{r}
-#| code-fold: true
-#| echo: false
-#| eval: false
-sse_optim_params_S0_I0 <- c(
-  beta = log(0.055),
-  gamma = log(365 / 14),
-  S_init = log(5000),
-  I_init = log(1)
-)
-
-# Create a dataframe of optimized parameters
-niamey_optims_S0_I0 <- niamey_df %>%
-  # Create a nested dataframe i.e. one row for each site, and the data column
-  # now is a list column that contains a separate dataframe of times and
-  # cases for each site
-  nest(data = -site) %>%
-  mutate(
-    # Map the optim() function call to each of the separate dataframes
-    # stored in the nested data column we just created
-    fit = map(data, ~ optim(sse_optim_params_S0_I0, sse_sir_S0_I0, data = .x)),
-    # Map the exp() function to each of the model fits just created, and
-    # output to a dataframe instead of a list (like in map()), for easier
-    # use in the plottinge predictions later
-    map_dfr(fit, ~ exp(.x$par))
-  )
-```
-
-```{r}
-#| code-fold: true
-#| echo: false
-#| eval: false
-sse.sir.x0 <- function(params0, data, site) {
-  #function to calculate squared errors
-  data <- data[data$site == site, ] #working dataset, based on site
-  t <- data[, 1] * 14 / 365 #time in biweeks
-  cases <- data[, 3] #number of cases
-  beta <- exp(params0[1]) #parameter beta
-  X0 <- 12500 #initial susceptibles (FIXED)
-  Y0 <- exp(params0[2]) #initial infected
-  gamma <- exp(params0[3])
-  out <- as.data.frame(ode(
-    c(X = X0, Y = Y0),
-    times = t,
-    closed.sir.model.g,
-    c(beta, gamma),
-    hmax = 1 / 120
-  ))
-  sum((out$Y - cases)^2) #sum of squared errors that is returned to the optim function
-}
-
-
-sse.sir.y0 <- function(params0, data, site) {
-  #function to calculate squared errors
-  data <- data[data$site == site, ] #working dataset, based on site
-  t <- data[, 1] * 14 / 365 #time in biweeks
-  cases <- data[, 3] #number of cases
-  beta <- exp(params0[1]) #parameter beta
-  X0 <- exp(params0[2]) #initial susceptibles (FIXED)
-  Y0 <- 1000 #initial infected
-  gamma <- exp(params0[3])
-  out <- as.data.frame(ode(
-    c(X = X0, Y = Y0),
-    times = t,
-    closed.sir.model.g,
-    c(beta, gamma),
-    hmax = 1 / 120
-  ))
-  sum((out$Y - cases)^2) #sum of squared errors that is returned to the optim function
-}
-
-
-sse.sir.x0y0 <- function(params0, data, site) {
-  #function to calculate squared errors
-  data <- data[data$site == site, ] #working dataset, based on site
-  t <- data[, 1] * 14 / 365 #time in biweeks
-  cases <- data[, 3] #number of cases
-  beta <- exp(params0[1]) #parameter beta
-  X0 <- 12500 #initial susceptibles (FIXED)
-  Y0 <- 1000 #initial infected (FIXED)
-  gamma <- exp(params0[2])
-  out <- as.data.frame(ode(
-    c(X = X0, Y = Y0),
-    times = t,
-    closed.sir.model.g,
-    c(beta, gamma),
-    hmax = 1 / 120
-  ))
-  sum((out$Y - cases)^2) #sum of squared errors that is returned to the optim function
-}
-```
-
-Now let's pass these models through `optim` and fit the models:
-
-```{r}
-#| code-fold: true
-#| echo: false
-#| eval: false
-# Fixing X0
-params0 <- c(-3.2, 1, log(14 / 365)) #initial guess of beta, Y0, and gamma
-fit1.x0 <- optim(params0, sse.sir.x0, data = niamey, site = 1, hessian = TRUE) #fit
-exp(fit1.x0$par) #back-transform parameters
-
-#Fixing Y0
-params0 <- c(-3.2, 3, log(14 / 365)) #initial guess of beta, X0, and gamma
-fit1.y0 <- optim(params0, sse.sir.y0, data = niamey, site = 1, hessian = TRUE) #fit
-exp(fit1.y0$par) #back-transform parameters
-
-#Fixing X0 and Y0
-params0 <- c(-3.2, log(14 / 365)) #initial guess of beta and gamma
-fit1.x0y0 <- optim(
-  params0,
-  sse.sir.x0y0,
-  data = niamey,
-  site = 1,
-  hessian = TRUE
-) #fit
-exp(fit1.x0y0$par) #back-transform parameters
-```
+</details>
