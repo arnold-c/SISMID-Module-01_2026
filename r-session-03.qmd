@@ -59,6 +59,12 @@ ggplot(flu, aes(x = day, y = flu)) +
   labs(x = "Day", y = "Active Influenza Cases")
 ```
 
+The figure above, and the corresponding tabulated outbreak data, report the number of **active influenza cases** on each day.
+These are point-in-time counts, or prevalence: the number of students who were sick at that moment.
+By contrast, the final-size calculation below uses cumulative **incidence**: the total number of students who became cases at any point during the outbreak.
+For this boarding school outbreak, the total school size was $N = 764$, and the total number of students who became cases over the full outbreak was $Z = 512$.
+Because $512$ is a cumulative incidence count, it is not obtained by reading a single value from the prevalence figure or table.
+
 ## Estimating $R_0$ From The Final Outbreak Size
 
 Our first approach is to estimate $R_0$ from the final outbreak size.
