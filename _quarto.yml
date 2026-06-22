@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "SISMID Module 1 Materials (2025)"
+  title: "SISMID Module 1 Materials (2026)"
   subtitle: "Mathematical Models of Infectious Diseases"
   author:
     - name: "Callum Arnold"
@@ -37,17 +37,17 @@ book:
         - L08_stochastic-models.qmd
         - r-session-04.qmd
     - references.qmd
-  repo-url: https://github.com/arnold-c/SISMID-Module-02_2025
+  repo-url: https://github.com/arnold-c/SISMID-Module-02_2026
   repo-actions: [edit]
   sidebar:
-    logo: ./images/sismid2025-logo-blue.png
+    logo: ./images/sismid2026-logo-blue.png
     search: true
     border: true
     pinned: true
   search:
     keyboard-shortcut: ["?", "s"]
   reader-mode: true
-  favicon: ./images/sismid2025-logo-blue.png
+  favicon: ./images/sismid2026-logo-blue.png
   google-analytics: "G-EVYBCCRZHE"
 
 # Default for table of contents
