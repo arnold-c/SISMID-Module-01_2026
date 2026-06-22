@@ -1,0 +1,5 @@
+name = "sismid-module-01-2026"
+compatibility_date = "2026-06-22"
+
+[assets]
+directory = "./_book"
