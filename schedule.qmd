@@ -41,7 +41,7 @@ Please see pre-requisites on the course website
 | 2:30pm - 3pm | Lecture 3: Vaccination & Interventions by Matt Ferrari |
 | 3pm - 3:30pm | Coffee break |
 | 3:30pm - 4:00pm | Lecture 3: Vaccination & Interventions by Matt Ferrari |
-| 4:00pm - 5pm | Interactive Session |
+| 4:00pm - 5pm | [Interactive Session](day-1-interactive-session.qmd) |
 | 5pm - 7pm | SISMID-wide networking mixer |
 : {.striped .hover tbl-colwidths="[25,75]"}
 
