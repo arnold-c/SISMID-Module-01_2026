@@ -1,0 +1,48 @@
+name: Deploy Quarto Site
+
+on:
+  push:
+    branches:
+      - main
+    pull_request: # Triggers on any PR targeting main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: release
+
+      # Generates the _site directory using your committed _freeze files
+      - name: Render Project
+        run: quarto render
+
+      # Deploys using the wrangler.toml specs
+      # Production render on push to main branch
+      - name: Deploy to Cloudflare Workers (Production)
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
+
+      # Render preview site for feature branches and pull requests
+      - name: Deploy to Cloudflare Workers (Preview)
+        if: github.ref != 'refs/heads/main' || github.event_name == 'pull_request'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: versions upload
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
