@@ -805,10 +805,7 @@ Show solutions
 <span id="cb15-7"><a href="#cb15-7"></a>  <span class="at">xlab =</span> <span class="st">'Biweek'</span>,</span>
 <span id="cb15-8"><a href="#cb15-8"></a>  <span class="at">ylab =</span> <span class="st">'Cases'</span></span>
 <span id="cb15-9"><a href="#cb15-9"></a>)</span>
-<span id="cb15-10"><a href="#cb15-10"></a><span class="fu">lines</span>(</span>
-<span id="cb15-11"><a href="#cb15-11"></a>  niamey_ex3<span class="sc">$</span>biweek[niamey_ex3<span class="sc">$</span>site <span class="sc">==</span> <span class="dv">1</span>],</span>
-<span id="cb15-12"><a href="#cb15-12"></a>  niamey_ex3<span class="sc">$</span>cases[niamey_ex3<span class="sc">$</span>site <span class="sc">==</span> <span class="dv">1</span>]</span>
-<span id="cb15-13"><a href="#cb15-13"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb15-10"><a href="#cb15-10"></a><span class="fu">lines</span>(niamey_ex3<span class="sc">$</span>biweek[niamey_ex3<span class="sc">$</span>site <span class="sc">==</span> <span class="dv">1</span>], niamey_ex3<span class="sc">$</span>cases[niamey_ex3<span class="sc">$</span>site <span class="sc">==</span> <span class="dv">1</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="r-session-03_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
@@ -827,10 +824,7 @@ Show solutions
 <span id="cb16-8"><a href="#cb16-8"></a>  <span class="at">ylab =</span> <span class="st">'Cases'</span>,</span>
 <span id="cb16-9"><a href="#cb16-9"></a>  <span class="at">log =</span> <span class="st">'y'</span></span>
 <span id="cb16-10"><a href="#cb16-10"></a>)</span>
-<span id="cb16-11"><a href="#cb16-11"></a><span class="fu">lines</span>(</span>
-<span id="cb16-12"><a href="#cb16-12"></a>  niamey_ex3<span class="sc">$</span>biweek[niamey_ex3<span class="sc">$</span>site <span class="sc">==</span> <span class="dv">1</span>],</span>
-<span id="cb16-13"><a href="#cb16-13"></a>  niamey_ex3<span class="sc">$</span>cases[niamey_ex3<span class="sc">$</span>site <span class="sc">==</span> <span class="dv">1</span>]</span>
-<span id="cb16-14"><a href="#cb16-14"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb16-11"><a href="#cb16-11"></a><span class="fu">lines</span>(niamey_ex3<span class="sc">$</span>biweek[niamey_ex3<span class="sc">$</span>site <span class="sc">==</span> <span class="dv">1</span>], niamey_ex3<span class="sc">$</span>cases[niamey_ex3<span class="sc">$</span>site <span class="sc">==</span> <span class="dv">1</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="r-session-03_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
@@ -2122,7 +2116,7 @@ Important
 <section id="exercise-5" class="level3 exercise" data-number="9.9.1"><h3 data-number="9.9.1" class="anchored" data-anchor-id="exercise-5">
 <span class="header-section-number">9.9.1</span> Exercise 5</h3>
 </section><p>To make things easier, we have assumed the infectious period is known to be 14 days. In terms of years, <span class="math inline">\(\text{D} = \frac{14}{365} \approx 0.0384\)</span>, and the recovery rate is the inverse i.e., <span class="math inline">\(\gamma = \frac{14}{365}\)</span>. Now, modify the code above to estimate <span class="math inline">\(\gamma\)</span> and <span class="math inline">\(\beta\)</span> simultaneously.</p>
-<details class="page-columns page-full"><summary>
+<details><summary>
 Show solutions
 </summary><p>First, add <span class="math inline">\(\gamma\)</span> as an optimized model parameter.</p>
 <div class="cell">
@@ -2689,7 +2683,7 @@ Show solutions
 </div>
 </div>
 <p>Finally, plot the fitted biweekly incidence against the observed data.</p>
-<div class="cell page-columns page-full">
+<div class="cell">
 <details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>niamey_predictions_g <span class="ot">&lt;-</span> niamey_optims_g <span class="sc">%&gt;%</span></span>
 <span id="cb47-2"><a href="#cb47-2"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb47-3"><a href="#cb47-3"></a>    <span class="at">predictions =</span> <span class="fu">pmap</span>(</span>
@@ -2736,9 +2730,9 @@ Show solutions
 <span id="cb47-44"><a href="#cb47-44"></a>  ) <span class="sc">+</span></span>
 <span id="cb47-45"><a href="#cb47-45"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Biweek"</span>, <span class="at">y =</span> <span class="st">"Number of Cases"</span>) <span class="sc">+</span></span>
 <span id="cb47-46"><a href="#cb47-46"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output-display page-columns page-full">
-<div class="page-columns page-full">
-<figure class="figure page-columns page-full"><p class="page-columns page-full"><img src="r-session-03_files/figure-html/unnamed-chunk-41-1.png" class="img-fluid figure-img column-body" style="width:100.0%"></p>
+</details><div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="r-session-03_files/figure-html/unnamed-chunk-41-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -5466,10 +5460,10 @@ window._ojs.runtime.interpretFromScriptTags();
 <span id="cb50-39"><a href="#cb50-39"></a><span class="in">```{r}</span></span>
 <span id="cb50-40"><a href="#cb50-40"></a><span class="co"># Loads the datasets: flu, measles, niamey, plauge</span></span>
 <span id="cb50-41"><a href="#cb50-41"></a>flu <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(</span>
-<span id="cb50-42"><a href="#cb50-42"></a>  <span class="st">"https://raw.githubusercontent.com/arnold-c/SISMID-Module-02_2025/main/data/flu.csv"</span></span>
+<span id="cb50-42"><a href="#cb50-42"></a>    <span class="st">"https://raw.githubusercontent.com/arnold-c/SISMID-Module-01_2026/main/data/flu.csv"</span></span>
 <span id="cb50-43"><a href="#cb50-43"></a>)</span>
 <span id="cb50-44"><a href="#cb50-44"></a>niamey <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(</span>
-<span id="cb50-45"><a href="#cb50-45"></a>  <span class="st">"https://raw.githubusercontent.com/arnold-c/SISMID-Module-02_2025/main/data/niamey.csv"</span></span>
+<span id="cb50-45"><a href="#cb50-45"></a>  <span class="st">"https://raw.githubusercontent.com/arnold-c/SISMID-Module-01_2026/main/data/niamey.csv"</span></span>
 <span id="cb50-46"><a href="#cb50-46"></a>)</span>
 <span id="cb50-47"><a href="#cb50-47"></a><span class="co"># flu &lt;- rio::import(here::here("data", "flu.csv"))</span></span>
 <span id="cb50-48"><a href="#cb50-48"></a><span class="co"># niamey &lt;- rio::import(here::here("data", "niamey.csv"))</span></span>
