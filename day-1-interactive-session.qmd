@@ -25,7 +25,7 @@ By the end of this session, you should be able to:
 
 ## Setup
 
-We will use the `diagram` package to draw box-and-arrow compartment diagrams, as in @sec-age-structure-ngm, and the `purrr` package to create uniform compartment boxes.
+We will use the `diagram` package to draw box-and-arrow compartment diagrams, as in [R Session 02](./r-session-02.qmd), and the `purrr` package to create uniform compartment boxes.
 
 ```{r}
 library(diagram)
@@ -41,9 +41,10 @@ The basic SIR model has three compartments:
 - $R$: recovered or removed individuals.
 
 ```{r}
-#| echo: false
+#| echo: true
 #| column: body
 #| out-width: 80%
+#| code-fold: true
 
 elpos <- rbind(
   S = c(1, 1),
@@ -96,10 +97,11 @@ par(op)
 
 For the standard SIR model, infection moves people from $S$ to $I$ at rate $\lambda$, and recovery or removal moves people from $I$ to $R$ at rate $\gamma$.
 
-## Group activity
+<div class="exercise">
 
-Choose one intervention or modeling feature that your group wants to represent.
-Then change the SIR diagram to include it.
+### Exercise 1: Choose one intervention or modeling feature that your group wants to represent. Then change the SIR diagram to include it.
+
+</div>
 
 Examples include:
 
@@ -120,16 +122,17 @@ For your modified model, prepare a short explanation of:
 4. what assumptions the new structure makes; and
 5. what qualitative effect you expect the intervention to have on the epidemic curve.
 
-## Example: adding vaccination
+### Example: adding vaccination
 
 One simple way to represent vaccination is to add a flow from $S$ to $R$.
 This assumes vaccination gives protection similar to recovery or removal.
 That is a strong assumption, but it is a useful starting point.
 
 ```{r}
-#| echo: false
+#| echo: true
 #| column: body
 #| out-width: 80%
+#| code-fold: true
 
 elpos <- rbind(
   S = c(1, 2),
@@ -259,9 +262,9 @@ text(mean(elpos[c("I", "R"), 1]), 0.62, expression(gamma), cex = 1.8)
 par(op)
 ```
 
-## Deliverable
+## Deliverables
 
-Each group should be ready to share:
+By the end of the exercise you should be able to share:
 
 - one modified box-and-arrow diagram;
 - a list of the model states;
