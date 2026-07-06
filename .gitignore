@@ -44,3 +44,7 @@ rsconnect/
 !.dev.vars.example
 .env*
 !.env.example
+
+# Quarto html files
+/_book/
+!/_freeze/
