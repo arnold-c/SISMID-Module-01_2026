@@ -836,7 +836,7 @@ aging_mat %>%
     z = Freq
   )) +
   geom_tile(colour = "grey", size = 0.4, aes(fill = Freq)) +
-scale_fill_gradientn(
+  scale_fill_gradientn(
     colours = c("red", "white", "blue"),
     breaks = c(-1, -0.2, 0, 0.2, 1),
     labels = c("-1", "-0.2", "0", "0.2", "1")
