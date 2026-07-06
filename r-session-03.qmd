@@ -223,7 +223,10 @@ plot(
   xlab = 'Biweek',
   ylab = 'Cases'
 )
-lines(niamey_ex3$biweek[niamey_ex3$site == 1], niamey_ex3$cases[niamey_ex3$site == 1])
+lines(
+  niamey_ex3$biweek[niamey_ex3$site == 1],
+  niamey_ex3$cases[niamey_ex3$site == 1]
+)
 ```
 
 ```{r}
@@ -237,7 +240,10 @@ plot(
   ylab = 'Cases',
   log = 'y'
 )
-lines(niamey_ex3$biweek[niamey_ex3$site == 1], niamey_ex3$cases[niamey_ex3$site == 1])
+lines(
+  niamey_ex3$biweek[niamey_ex3$site == 1],
+  niamey_ex3$cases[niamey_ex3$site == 1]
+)
 ```
 
 ```{r}
@@ -942,6 +948,8 @@ niamey_optims_g %>%
 Finally, plot the fitted biweekly incidence against the observed data.
 
 ```{r}
+#| column: body
+#| out-width: 100%
 niamey_predictions_g <- niamey_optims_g %>%
   mutate(
     predictions = pmap(
