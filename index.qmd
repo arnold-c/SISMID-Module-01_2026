@@ -2,7 +2,7 @@
 
 Hello! 
 
-Welcome to this website that accompanies the [2025 Summer Institute in Modeling for Infectious Diseases (SISMID) Module 1: Mathematical Models of Infectious Diseases](https://sph.emory.edu/SISMID/modules/math-models/index.html).
+Welcome to this website that accompanies the [2026 Summer Institute in Modeling for Infectious Diseases (SISMID) Module 1: Mathematical Models of Infectious Diseases](https://sph.emory.edu/SISMID/modules/math-models/index.html).
 This website contains both the lecture notes, so you can refer back to them at a later date, and the exercises that we will be completing throughout the module.
 
 ## Workshop Pre-Requisites
@@ -116,11 +116,11 @@ Dr Ferrari's lab does research on both the application of quantitative modeling 
 </div>
 
 <div class="box" style="--width: 50%">
-<h3 style="margin-top:0px; text-align: center">[Dr. Alpha Forna](https://ecology.uga.edu/directory/alpha-forna/)</h3>
-<img src="./images/alpha-forna.jpg" style="width: 100%"/>
-Dr. Forna is a Post-doctoral Researcher Associate in the Drake and Rohani Labs at the University of Georgia.
+<h3 style="margin-top:0px; text-align: center">[ Nicholas Adam](https://ecology.uga.edu/directory/nicholas-adam/)</h3>
+<img src="./images/Nicholas-Adam.jpg" style="width: 100%"/>
+Nicholas Adam is a doctoral student in the Drake Labs at the University of Georgia.
+Adam's research focuses on using statistical leading indicators for infectious disease forecasting with an aim of improving health care and public health decision-makers confidence in model outputs use during epidemics. Nicholas is also the director for the Centre for Epidemiological and Mathematical Research in Malawi.
 
-Dr Forna's research focuses on the adaptation and application of machine learning methods to biological and epidemiological data, with an aim to positively inform efficient and cost-effective infectious disease prevention and intervention efforts (vaccines and antimicrobials, especially).
 </div>
 
 <div style="width: 25%">
