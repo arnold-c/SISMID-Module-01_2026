@@ -8,7 +8,7 @@ metadata-files:
 ---
 
 ```{=html}
-<iframe class="slide-deck" src="https://docs.google.com/presentation/d/e/2PACX-1vQsRgPlOrO5z0MQrBvBm7ZejlItApSm-YsIrqXbR6GVuget1TH8sUnGmRO045_IrQ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1023" height="606" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe class="slide-deck" src="https://docs.google.com/presentation/d/e/2PACX-1vRsVU6jPmYp8uQIVz10tU_B21j5RcEhBN-95kHab_mBetGr3Yk72tyjmm--0Ca7kQ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1023" height="606" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 ```
 
-[Download slides](./slides/L01_Intro-to-modeling.pdf)
+[Download slides as PDF](https://docs.google.com/presentation/d/1BzSu4gUdHWq_LrFt5OBvH-Lqw9uXGU77/export/pdf){target="_blank"}

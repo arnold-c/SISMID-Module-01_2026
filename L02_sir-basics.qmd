@@ -8,7 +8,7 @@ metadata-files:
 ---
 
 ```{=html}
-<iframe class="slide-deck" src="https://docs.google.com/presentation/d/e/2PACX-1vRCwcdlnpq0XvICPuCruydzjAajlmSpG4dPVCPRUTyy0yKjvLTgCEgm5iJq5ppDTw/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1023" height="606" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe class="slide-deck" src="https://docs.google.com/presentation/d/e/2PACX-1vT3MB9_CCsFK0uRA5_SZdQfPcpQ1ZTr8JvxORrwJ6u_0Vo42IMFnxEso5uNXdzd0g/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1023" height="606" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 ```
 
-[Download slides](./slides/L02_Basic-SIR-dynamics.pdf)
+[Download slides as PDF](https://docs.google.com/presentation/d/1ewcBrDokNNYQ4KNP1QgcAjlo_iebV_1z/export/pdf){target="_blank"}

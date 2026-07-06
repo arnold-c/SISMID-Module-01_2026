@@ -29,13 +29,13 @@ book:
         - day-1-interactive-session.qmd
     - part: "Day 2"
       chapters:
-        - L05_age-structure.qmd
+        - L04_age-structure.qmd
         - r-session-02.qmd
-        - L06_parameter-estimation.qmd
+        - L05_parameter-estimation.qmd
         - r-session-03.qmd
     - part: "Day 3"
       chapters:
-        - L08_stochastic-models.qmd
+        - L06_stochastic-models.qmd
         - r-session-04.qmd
     - references.qmd
   repo-url: https://github.com/arnold-c/SISMID-Module-02_2026

@@ -1,0 +1,15 @@
+---
+title: Stochastic Models
+format:
+    html:
+        page-layout: full
+metadata-files:
+  - metadata/matthewferrari.yml
+  - metadata/amywinter.yml
+---
+
+```{=html}
+<iframe class="slide-deck" src="https://docs.google.com/presentation/d/e/2PACX-1vSYjGVo-v8FDFlusKZ-b_yBriD5DQuwOrzg5cIfQkq3rAY8nu_MYt_zvlHw73p3og/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1023" height="606" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+```
+
+[Download slides as PDF](https://docs.google.com/presentation/d/1nypsjxAXPd7pNoyOOVkVtqbKe23qx6Kl/export/pdf){target="_blank"}

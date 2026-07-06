@@ -346,7 +346,7 @@
     "href": "L01_intro-to-modeling.html",
     "title": "1  Intro to Modeling",
     "section": "",
-    "text": "Download slides",
+    "text": "Download slides as PDF",
     "crumbs": [
       "Day 1",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Intro to Modeling</span>"
@@ -357,7 +357,7 @@
     "href": "L02_sir-basics.html",
     "title": "2  Basics of SIR Models",
     "section": "",
-    "text": "Download slides",
+    "text": "Download slides as PDF",
     "crumbs": [
       "Day 1",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of SIR Models</span>"
@@ -434,7 +434,7 @@
     "href": "L03_hit-and-vaccinations.html",
     "title": "4  Herd Immunity & Vaccination",
     "section": "",
-    "text": "Download slides",
+    "text": "Download slides as PDF",
     "crumbs": [
       "Day 1",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Herd Immunity & Vaccination</span>"
@@ -445,7 +445,7 @@
     "href": "L05_age-structure.html",
     "title": "6  Heterogeneity and Age Structure",
     "section": "",
-    "text": "Download slides",
+    "text": "Download slides as PDF",
     "crumbs": [
       "Day 2",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Heterogeneity and Age Structure</span>"
@@ -522,7 +522,7 @@
     "href": "L06_parameter-estimation.html",
     "title": "8  Parameter Estimation",
     "section": "",
-    "text": "Download slides",
+    "text": "Download slides as PDF",
     "crumbs": [
       "Day 2",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Parameter Estimation</span>"
@@ -822,6 +822,39 @@
     "crumbs": [
       "Day 1",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Compartmental Diagram Interactive Session</span>"
+    ]
+  },
+  {
+    "objectID": "L04_age-structure.html",
+    "href": "L04_age-structure.html",
+    "title": "6  Heterogeneity and Age Structure",
+    "section": "",
+    "text": "Download slides as PDF",
+    "crumbs": [
+      "Day 2",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Heterogeneity and Age Structure</span>"
+    ]
+  },
+  {
+    "objectID": "L05_parameter-estimation.html",
+    "href": "L05_parameter-estimation.html",
+    "title": "8  Parameter Estimation",
+    "section": "",
+    "text": "Download slides as PDF",
+    "crumbs": [
+      "Day 2",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Parameter Estimation</span>"
+    ]
+  },
+  {
+    "objectID": "L06_stochastic-models.html",
+    "href": "L06_stochastic-models.html",
+    "title": "10  Stochastic Models",
+    "section": "",
+    "text": "Download slides as PDF",
+    "crumbs": [
+      "Day 3",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Stochastic Models</span>"
     ]
   }
 ]

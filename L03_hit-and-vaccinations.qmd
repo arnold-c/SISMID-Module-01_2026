@@ -8,7 +8,7 @@ metadata-files:
 ---
 
 ```{=html}
-<iframe class="slide-deck" src="https://docs.google.com/presentation/d/e/2PACX-1vSzfcaCBOFDVX93bClkECvEndvZrTkMesSxdjXHPSbHCU5pIo7l6hTSFfXzElCHSQ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1023" height="606" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe class="slide-deck" src="https://docs.google.com/presentation/d/e/2PACX-1vTGE689-psnW9PEeNh7Agi_6QCqYbL8STqPN1PLzdHABYS2E40LF5vNipdNrpJQng/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1023" height="606" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 ```
 
-[Download slides](./slides/L03_Herd-immunity-vaccination.pdf)
+[Download slides as PDF](https://docs.google.com/presentation/d/1906a4BAaoVKparsdhAl6CMuBVsPaBif4/edit?slide=id.g33d46a4b33a_0_386#slide=id.g33d46a4b33a_0_386/export/pdf){target="_blank"}
