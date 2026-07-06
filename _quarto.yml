@@ -66,7 +66,7 @@ execute:
   message: true
   warning: true
   cache: true
-  freeze: auto
+  freeze: true
 
 # Default author
 author:
