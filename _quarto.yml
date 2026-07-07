@@ -38,7 +38,7 @@ book:
         - L06_stochastic-models.qmd
         - r-session-04.qmd
     - references.qmd
-  repo-url: https://github.com/arnold-c/SISMID-Module-02_2026
+  repo-url: https://github.com/arnold-c/SISMID-Module-01_2026
   repo-actions: [edit]
   sidebar:
     logo: ./images/sismid2026-logo-blue.png
