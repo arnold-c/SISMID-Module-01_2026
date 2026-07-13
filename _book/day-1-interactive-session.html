@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./L05_age-structure.html" rel="next">
+<link href="./L04_age-structure.html" rel="next">
 <link href="./L03_hit-and-vaccinations.html" rel="prev">
 <link href="././images/sismid2026-logo-blue.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -323,7 +323,7 @@ window.Quarto = {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">SISMID Module 1 Materials (2026)</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/arnold-c/SISMID-Module-02_2026" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/arnold-c/SISMID-Module-01_2026" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -445,7 +445,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./L05_age-structure.html" class="sidebar-item-text sidebar-link">
+  <a href="./L04_age-structure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Heterogeneity and Age Structure</span></span></a>
   </div>
 </li>
@@ -457,7 +457,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./L06_parameter-estimation.html" class="sidebar-item-text sidebar-link">
+  <a href="./L05_parameter-estimation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Parameter Estimation</span></span></a>
   </div>
 </li>
@@ -480,7 +480,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./L08_stochastic-models.html" class="sidebar-item-text sidebar-link">
+  <a href="./L06_stochastic-models.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Stochastic Models</span></span></a>
   </div>
 </li>
@@ -512,12 +512,9 @@ window.Quarto = {
 <a href="#starting-point-a-simple-sir-diagram" id="toc-starting-point-a-simple-sir-diagram" class="nav-link" data-scroll-target="#starting-point-a-simple-sir-diagram"><span class="header-section-number">5.3</span> Starting point: a simple SIR diagram</a>
   <ul class="collapse">
 <li><a href="#exercise-1-choose-one-intervention-or-modeling-feature-that-your-group-wants-to-represent.-then-change-the-sir-diagram-to-include-it." id="toc-exercise-1-choose-one-intervention-or-modeling-feature-that-your-group-wants-to-represent.-then-change-the-sir-diagram-to-include-it." class="nav-link" data-scroll-target="#exercise-1-choose-one-intervention-or-modeling-feature-that-your-group-wants-to-represent.-then-change-the-sir-diagram-to-include-it."><span class="header-section-number">5.3.1</span> Exercise 1: Choose one intervention or modeling feature that your group wants to represent. Then change the SIR diagram to include it.</a></li>
-  <li><a href="#example-adding-vaccination" id="toc-example-adding-vaccination" class="nav-link" data-scroll-target="#example-adding-vaccination"><span class="header-section-number">5.3.2</span> Example: adding vaccination</a></li>
   </ul>
 </li>
-  <li><a href="#template-for-your-diagram" id="toc-template-for-your-diagram" class="nav-link" data-scroll-target="#template-for-your-diagram"><span class="header-section-number">5.4</span> Template for your diagram</a></li>
-  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables"><span class="header-section-number">5.5</span> Deliverables</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/arnold-c/SISMID-Module-02_2026/edit/main/day-1-interactive-session.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/arnold-c/SISMID-Module-01_2026/edit/main/day-1-interactive-session.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./L01_intro-to-modeling.html">Day 1</a></li><li class="breadcrumb-item"><a href="./day-1-interactive-session.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Compartmental Diagram Interactive Session</span></a></li></ol></nav><div class="quarto-title">
@@ -644,163 +641,7 @@ window.Quarto = {
 <p>For the standard SIR model, infection moves people from <span class="math inline">\(S\)</span> to <span class="math inline">\(I\)</span> at rate <span class="math inline">\(\lambda\)</span>, and recovery or removal moves people from <span class="math inline">\(I\)</span> to <span class="math inline">\(R\)</span> at rate <span class="math inline">\(\gamma\)</span>.</p>
 <section id="exercise-1-choose-one-intervention-or-modeling-feature-that-your-group-wants-to-represent.-then-change-the-sir-diagram-to-include-it." class="level3 exercise" data-number="5.3.1"><h3 data-number="5.3.1" class="anchored" data-anchor-id="exercise-1-choose-one-intervention-or-modeling-feature-that-your-group-wants-to-represent.-then-change-the-sir-diagram-to-include-it.">
 <span class="header-section-number">5.3.1</span> Exercise 1: Choose one intervention or modeling feature that your group wants to represent. Then change the SIR diagram to include it.</h3>
-</section><p>Examples include:</p>
-<ul>
-<li>vaccination;</li>
-<li>isolation or quarantine;</li>
-<li>masking or behavior change;</li>
-<li>waning immunity;</li>
-<li>births and deaths;</li>
-<li>treatment;</li>
-<li>age groups or other risk groups; or</li>
-<li>any intervention relevant to your own research area.</li>
-</ul>
-<p>For your modified model, prepare a short explanation of:</p>
-<ol type="1">
-<li>which compartments you added or removed;</li>
-<li>which arrows you added or removed;</li>
-<li>what parameter or rate each new arrow represents;</li>
-<li>what assumptions the new structure makes; and</li>
-<li>what qualitative effect you expect the intervention to have on the epidemic curve.</li>
-</ol>
-<section id="example-adding-vaccination" class="level3 page-columns page-full" data-number="5.3.2"><h3 data-number="5.3.2" class="anchored" data-anchor-id="example-adding-vaccination">
-<span class="header-section-number">5.3.2</span> Example: adding vaccination</h3>
-<p>One simple way to represent vaccination is to add a flow from <span class="math inline">\(S\)</span> to <span class="math inline">\(R\)</span>. This assumes vaccination gives protection similar to recovery or removal. That is a strong assumption, but it is a useful starting point.</p>
-<div class="cell page-columns page-full">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>elpos <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="at">S =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="at">I =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>),</span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="at">R =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>)</span>
-<span id="cb4-5"><a href="#cb4-5"></a>)</span>
-<span id="cb4-6"><a href="#cb4-6"></a></span>
-<span id="cb4-7"><a href="#cb4-7"></a>elpos[, <span class="dv">1</span>] <span class="ot">&lt;-</span> (<span class="dv">2</span> <span class="sc">*</span> elpos[, <span class="dv">1</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">6</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a>elpos[, <span class="dv">2</span>] <span class="ot">&lt;-</span> (<span class="dv">2</span> <span class="sc">*</span> elpos[, <span class="dv">2</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">4</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a></span>
-<span id="cb4-10"><a href="#cb4-10"></a>fromto <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb4-11"><a href="#cb4-11"></a>  <span class="at">SI =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
-<span id="cb4-12"><a href="#cb4-12"></a>  <span class="at">IR =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>),</span>
-<span id="cb4-13"><a href="#cb4-13"></a>  <span class="at">SR =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>)</span>
-<span id="cb4-14"><a href="#cb4-14"></a>)</span>
-<span id="cb4-15"><a href="#cb4-15"></a></span>
-<span id="cb4-16"><a href="#cb4-16"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
-<span id="cb4-17"><a href="#cb4-17"></a>diagram<span class="sc">::</span><span class="fu">openplotmat</span>(<span class="at">asp =</span> <span class="fl">0.65</span>)</span>
-<span id="cb4-18"><a href="#cb4-18"></a></span>
-<span id="cb4-19"><a href="#cb4-19"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(fromto))) {</span>
-<span id="cb4-20"><a href="#cb4-20"></a>  diagram<span class="sc">::</span><span class="fu">straightarrow</span>(</span>
-<span id="cb4-21"><a href="#cb4-21"></a>    <span class="at">to =</span> elpos[fromto[i, <span class="dv">2</span>], ],</span>
-<span id="cb4-22"><a href="#cb4-22"></a>    <span class="at">from =</span> elpos[fromto[i, <span class="dv">1</span>], ],</span>
-<span id="cb4-23"><a href="#cb4-23"></a>    <span class="at">lwd =</span> <span class="dv">2</span>,</span>
-<span id="cb4-24"><a href="#cb4-24"></a>    <span class="at">arr.pos =</span> <span class="fl">0.65</span>,</span>
-<span id="cb4-25"><a href="#cb4-25"></a>    <span class="at">arr.length =</span> <span class="fl">0.5</span></span>
-<span id="cb4-26"><a href="#cb4-26"></a>  )</span>
-<span id="cb4-27"><a href="#cb4-27"></a>}</span>
-<span id="cb4-28"><a href="#cb4-28"></a></span>
-<span id="cb4-29"><a href="#cb4-29"></a>purrr<span class="sc">::</span><span class="fu">walk</span>(</span>
-<span id="cb4-30"><a href="#cb4-30"></a>  <span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"I"</span>, <span class="st">"R"</span>),</span>
-<span id="cb4-31"><a href="#cb4-31"></a>  <span class="at">.f =</span> <span class="cf">function</span>(.x) {</span>
-<span id="cb4-32"><a href="#cb4-32"></a>    diagram<span class="sc">::</span><span class="fu">textrect</span>(</span>
-<span id="cb4-33"><a href="#cb4-33"></a>      elpos[.x, ],</span>
-<span id="cb4-34"><a href="#cb4-34"></a>      <span class="fl">0.08</span>,</span>
-<span id="cb4-35"><a href="#cb4-35"></a>      <span class="fl">0.10</span>,</span>
-<span id="cb4-36"><a href="#cb4-36"></a>      <span class="at">lab =</span> .x,</span>
-<span id="cb4-37"><a href="#cb4-37"></a>      <span class="at">box.col =</span> <span class="fu">gray</span>(<span class="fl">0.7</span>),</span>
-<span id="cb4-38"><a href="#cb4-38"></a>      <span class="at">shadow.col =</span> <span class="fu">gray</span>(<span class="fl">0.4</span>),</span>
-<span id="cb4-39"><a href="#cb4-39"></a>      <span class="at">shadow.size =</span> <span class="fl">0.01</span>,</span>
-<span id="cb4-40"><a href="#cb4-40"></a>      <span class="at">cex =</span> <span class="dv">2</span></span>
-<span id="cb4-41"><a href="#cb4-41"></a>    )</span>
-<span id="cb4-42"><a href="#cb4-42"></a>  }</span>
-<span id="cb4-43"><a href="#cb4-43"></a>)</span>
-<span id="cb4-44"><a href="#cb4-44"></a></span>
-<span id="cb4-45"><a href="#cb4-45"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"I"</span>), <span class="dv">1</span>]), <span class="fl">0.86</span>, <span class="fu">expression</span>(lambda), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb4-46"><a href="#cb4-46"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"R"</span>), <span class="dv">1</span>]) <span class="sc">+</span> <span class="fl">0.04</span>, <span class="fl">0.47</span>, <span class="fu">expression</span>(gamma), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb4-47"><a href="#cb4-47"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"R"</span>), <span class="dv">1</span>]) <span class="sc">-</span> <span class="fl">0.04</span>, <span class="fl">0.47</span>, <span class="fu">expression</span>(v), <span class="at">cex =</span> <span class="fl">1.8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output-display page-columns page-full">
-<div class="page-columns page-full">
-<figure class="figure page-columns page-full"><p class="page-columns page-full"><img src="day-1-interactive-session_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img column-body" style="width:80.0%"></p>
-</figure>
-</div>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">par</span>(op)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<p>In this example, <span class="math inline">\(v\)</span> is the vaccination rate. Before writing equations, ask what this diagram assumes. For example, does vaccination work immediately? Does everyone have the same access to vaccination? Is vaccine protection perfect? Does protection wane?</p>
-</section></section><section id="template-for-your-diagram" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="template-for-your-diagram">
-<span class="header-section-number">5.4</span> Template for your diagram</h2>
-<p>You can copy and modify this code chunk to make your own diagram. Add compartments to <code>elpos</code>, add arrows to <code>fromto</code>, and label any new rates.</p>
-<div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Define the locations of each compartment.</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="co"># Each row is one compartment, and the two numbers give its x- and</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># y-position before scaling.</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>elpos <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb6-5"><a href="#cb6-5"></a>  <span class="at">S =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>),</span>
-<span id="cb6-6"><a href="#cb6-6"></a>  <span class="at">I =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>),</span>
-<span id="cb6-7"><a href="#cb6-7"></a>  <span class="at">R =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>)</span>
-<span id="cb6-8"><a href="#cb6-8"></a>)</span>
-<span id="cb6-9"><a href="#cb6-9"></a></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="co"># Rescale the compartment positions so they fit inside the plotting area.</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a>elpos[, <span class="dv">1</span>] <span class="ot">&lt;-</span> (<span class="dv">2</span> <span class="sc">*</span> elpos[, <span class="dv">1</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">6</span></span>
-<span id="cb6-12"><a href="#cb6-12"></a>elpos[, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
-<span id="cb6-13"><a href="#cb6-13"></a></span>
-<span id="cb6-14"><a href="#cb6-14"></a><span class="co"># Define the arrows between compartments.</span></span>
-<span id="cb6-15"><a href="#cb6-15"></a><span class="co"># The numbers refer to row positions in elpos, so SI = c(1, 2) draws an</span></span>
-<span id="cb6-16"><a href="#cb6-16"></a><span class="co"># arrow from the first row, S, to the second row, I.</span></span>
-<span id="cb6-17"><a href="#cb6-17"></a>fromto <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb6-18"><a href="#cb6-18"></a>  <span class="at">SI =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
-<span id="cb6-19"><a href="#cb6-19"></a>  <span class="at">IR =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb6-20"><a href="#cb6-20"></a>)</span>
-<span id="cb6-21"><a href="#cb6-21"></a></span>
-<span id="cb6-22"><a href="#cb6-22"></a><span class="co"># Set small plot margins and open a blank plotting area for the diagram.</span></span>
-<span id="cb6-23"><a href="#cb6-23"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
-<span id="cb6-24"><a href="#cb6-24"></a>diagram<span class="sc">::</span><span class="fu">openplotmat</span>(<span class="at">asp =</span> <span class="fl">0.35</span>)</span>
-<span id="cb6-25"><a href="#cb6-25"></a></span>
-<span id="cb6-26"><a href="#cb6-26"></a><span class="co"># Draw one arrow for each row in fromto.</span></span>
-<span id="cb6-27"><a href="#cb6-27"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(fromto))) {</span>
-<span id="cb6-28"><a href="#cb6-28"></a>  diagram<span class="sc">::</span><span class="fu">straightarrow</span>(</span>
-<span id="cb6-29"><a href="#cb6-29"></a>    <span class="at">to =</span> elpos[fromto[i, <span class="dv">2</span>], ],</span>
-<span id="cb6-30"><a href="#cb6-30"></a>    <span class="at">from =</span> elpos[fromto[i, <span class="dv">1</span>], ],</span>
-<span id="cb6-31"><a href="#cb6-31"></a>    <span class="at">lwd =</span> <span class="dv">2</span>,</span>
-<span id="cb6-32"><a href="#cb6-32"></a>    <span class="at">arr.pos =</span> <span class="fl">0.65</span>,</span>
-<span id="cb6-33"><a href="#cb6-33"></a>    <span class="at">arr.length =</span> <span class="fl">0.5</span></span>
-<span id="cb6-34"><a href="#cb6-34"></a>  )</span>
-<span id="cb6-35"><a href="#cb6-35"></a>}</span>
-<span id="cb6-36"><a href="#cb6-36"></a></span>
-<span id="cb6-37"><a href="#cb6-37"></a><span class="co"># Draw a labeled box for each compartment.</span></span>
-<span id="cb6-38"><a href="#cb6-38"></a>purrr<span class="sc">::</span><span class="fu">walk</span>(</span>
-<span id="cb6-39"><a href="#cb6-39"></a>  <span class="fu">rownames</span>(elpos),</span>
-<span id="cb6-40"><a href="#cb6-40"></a>  <span class="at">.f =</span> <span class="cf">function</span>(.x) {</span>
-<span id="cb6-41"><a href="#cb6-41"></a>    diagram<span class="sc">::</span><span class="fu">textrect</span>(</span>
-<span id="cb6-42"><a href="#cb6-42"></a>      elpos[.x, ],</span>
-<span id="cb6-43"><a href="#cb6-43"></a>      <span class="fl">0.08</span>,</span>
-<span id="cb6-44"><a href="#cb6-44"></a>      <span class="fl">0.10</span>,</span>
-<span id="cb6-45"><a href="#cb6-45"></a>      <span class="at">lab =</span> .x,</span>
-<span id="cb6-46"><a href="#cb6-46"></a>      <span class="at">box.col =</span> <span class="fu">gray</span>(<span class="fl">0.7</span>),</span>
-<span id="cb6-47"><a href="#cb6-47"></a>      <span class="at">shadow.col =</span> <span class="fu">gray</span>(<span class="fl">0.4</span>),</span>
-<span id="cb6-48"><a href="#cb6-48"></a>      <span class="at">shadow.size =</span> <span class="fl">0.01</span>,</span>
-<span id="cb6-49"><a href="#cb6-49"></a>      <span class="at">cex =</span> <span class="dv">2</span></span>
-<span id="cb6-50"><a href="#cb6-50"></a>    )</span>
-<span id="cb6-51"><a href="#cb6-51"></a>  }</span>
-<span id="cb6-52"><a href="#cb6-52"></a>)</span>
-<span id="cb6-53"><a href="#cb6-53"></a></span>
-<span id="cb6-54"><a href="#cb6-54"></a><span class="co"># Label the arrows with the rates that move individuals between states.</span></span>
-<span id="cb6-55"><a href="#cb6-55"></a><span class="co"># Adjust the x- and y-positions if you add new compartments or arrows.</span></span>
-<span id="cb6-56"><a href="#cb6-56"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"I"</span>), <span class="dv">1</span>]), <span class="fl">0.62</span>, <span class="fu">expression</span>(lambda), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb6-57"><a href="#cb6-57"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"R"</span>), <span class="dv">1</span>]), <span class="fl">0.62</span>, <span class="fu">expression</span>(gamma), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb6-58"><a href="#cb6-58"></a></span>
-<span id="cb6-59"><a href="#cb6-59"></a><span class="co"># Restore the previous plotting settings.</span></span>
-<span id="cb6-60"><a href="#cb6-60"></a><span class="fu">par</span>(op)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-</section><section id="deliverables" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="deliverables">
-<span class="header-section-number">5.5</span> Deliverables</h2>
-<p>By the end of the exercise you should be able to share:</p>
-<ul>
-<li>one modified box-and-arrow diagram;</li>
-<li>a list of the model states;</li>
-<li>a list of the model flows and parameters;</li>
-<li>one or two key assumptions implied by the diagram; and</li>
-<li>one prediction for how the intervention changes the epidemic trajectory.</li>
-</ul>
-
+</section>
 
 <!-- -->
 
@@ -1273,289 +1114,120 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./L05_age-structure.html" class="pagination-link" aria-label="Heterogeneity and Age Structure">
+      <a href="./L04_age-structure.html" class="pagination-link" aria-label="Heterogeneity and Age Structure">
         <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Heterogeneity and Age Structure</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-shortcodes="false" data-code-line-numbers=""><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">---</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="an">title:</span><span class="co"> "Compartmental Diagram Interactive Session"</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="an">execute:</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="co">    echo: true</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="co">    warning: false</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="an">editor:</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="co">  markdown:</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="co">    wrap: sentence</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a><span class="an">metadata-files:</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a><span class="co">    - metadata/matthewferrari.yml</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="co">---</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a></span>
-<span id="cb7-13"><a href="#cb7-13"></a>In this session, you will start with a simple SIR model diagram and modify it to represent an intervention or transmission process that is interesting to your group.</span>
-<span id="cb7-14"><a href="#cb7-14"></a>The goal is not to make the most complicated model possible.</span>
-<span id="cb7-15"><a href="#cb7-15"></a>Instead, the goal is to make each modeling choice explicit: what compartments are needed, what flows connect them, and what assumptions those flows imply.</span>
-<span id="cb7-16"><a href="#cb7-16"></a></span>
-<span id="cb7-17"><a href="#cb7-17"></a><span class="fu">## Learning goals</span></span>
-<span id="cb7-18"><a href="#cb7-18"></a></span>
-<span id="cb7-19"><a href="#cb7-19"></a>By the end of this session, you should be able to:</span>
-<span id="cb7-20"><a href="#cb7-20"></a></span>
-<span id="cb7-21"><a href="#cb7-21"></a><span class="ss">1. </span>understand how to translate a public-health intervention into a compartment model structure;</span>
-<span id="cb7-22"><a href="#cb7-22"></a><span class="ss">2. </span>identify the states, flows, and parameters in that structure;</span>
-<span id="cb7-23"><a href="#cb7-23"></a><span class="ss">3. </span>explain which assumptions are introduced by adding or removing arrows; and</span>
-<span id="cb7-24"><a href="#cb7-24"></a><span class="ss">4. </span>describe the expected qualitative effect of the intervention on epidemic dynamics.</span>
-<span id="cb7-25"><a href="#cb7-25"></a></span>
-<span id="cb7-26"><a href="#cb7-26"></a><span class="fu">## Setup</span></span>
-<span id="cb7-27"><a href="#cb7-27"></a></span>
-<span id="cb7-28"><a href="#cb7-28"></a>We will use the <span class="in">`diagram`</span> package to draw box-and-arrow compartment diagrams, as in <span class="co">[</span><span class="ot">R Session 02</span><span class="co">](./r-session-02.qmd)</span>, and the <span class="in">`purrr`</span> package to create uniform compartment boxes.</span>
-<span id="cb7-29"><a href="#cb7-29"></a></span>
-<span id="cb7-32"><a href="#cb7-32"></a><span class="in">```{r}</span></span>
-<span id="cb7-33"><a href="#cb7-33"></a><span class="fu">library</span>(diagram)</span>
-<span id="cb7-34"><a href="#cb7-34"></a><span class="fu">library</span>(purrr)</span>
-<span id="cb7-35"><a href="#cb7-35"></a><span class="in">```</span></span>
-<span id="cb7-36"><a href="#cb7-36"></a></span>
-<span id="cb7-37"><a href="#cb7-37"></a><span class="fu">## Starting point: a simple SIR diagram</span></span>
-<span id="cb7-38"><a href="#cb7-38"></a></span>
-<span id="cb7-39"><a href="#cb7-39"></a>The basic SIR model has three compartments:</span>
-<span id="cb7-40"><a href="#cb7-40"></a></span>
-<span id="cb7-41"><a href="#cb7-41"></a><span class="ss">- </span>$S$: susceptible individuals;</span>
-<span id="cb7-42"><a href="#cb7-42"></a><span class="ss">- </span>$I$: infectious individuals; and</span>
-<span id="cb7-43"><a href="#cb7-43"></a><span class="ss">- </span>$R$: recovered or removed individuals.</span>
-<span id="cb7-44"><a href="#cb7-44"></a></span>
-<span id="cb7-47"><a href="#cb7-47"></a><span class="in">```{r}</span></span>
-<span id="cb7-48"><a href="#cb7-48"></a><span class="co">#| echo: true</span></span>
-<span id="cb7-49"><a href="#cb7-49"></a><span class="co">#| column: body</span></span>
-<span id="cb7-50"><a href="#cb7-50"></a><span class="co">#| out-width: 80%</span></span>
-<span id="cb7-51"><a href="#cb7-51"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb7-52"><a href="#cb7-52"></a></span>
-<span id="cb7-53"><a href="#cb7-53"></a>elpos <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb7-54"><a href="#cb7-54"></a>  <span class="at">S =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>),</span>
-<span id="cb7-55"><a href="#cb7-55"></a>  <span class="at">I =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>),</span>
-<span id="cb7-56"><a href="#cb7-56"></a>  <span class="at">R =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>)</span>
-<span id="cb7-57"><a href="#cb7-57"></a>)</span>
-<span id="cb7-58"><a href="#cb7-58"></a></span>
-<span id="cb7-59"><a href="#cb7-59"></a>elpos[, <span class="dv">1</span>] <span class="ot">&lt;-</span> (<span class="dv">2</span> <span class="sc">*</span> elpos[, <span class="dv">1</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">6</span></span>
-<span id="cb7-60"><a href="#cb7-60"></a>elpos[, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
-<span id="cb7-61"><a href="#cb7-61"></a></span>
-<span id="cb7-62"><a href="#cb7-62"></a>fromto <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb7-63"><a href="#cb7-63"></a>  <span class="at">SI =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
-<span id="cb7-64"><a href="#cb7-64"></a>  <span class="at">IR =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb7-65"><a href="#cb7-65"></a>)</span>
-<span id="cb7-66"><a href="#cb7-66"></a></span>
-<span id="cb7-67"><a href="#cb7-67"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
-<span id="cb7-68"><a href="#cb7-68"></a>diagram<span class="sc">::</span><span class="fu">openplotmat</span>(<span class="at">asp =</span> <span class="fl">0.35</span>)</span>
-<span id="cb7-69"><a href="#cb7-69"></a></span>
-<span id="cb7-70"><a href="#cb7-70"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(fromto))) {</span>
-<span id="cb7-71"><a href="#cb7-71"></a>  diagram<span class="sc">::</span><span class="fu">straightarrow</span>(</span>
-<span id="cb7-72"><a href="#cb7-72"></a>    <span class="at">to =</span> elpos[fromto[i, <span class="dv">2</span>], ],</span>
-<span id="cb7-73"><a href="#cb7-73"></a>    <span class="at">from =</span> elpos[fromto[i, <span class="dv">1</span>], ],</span>
-<span id="cb7-74"><a href="#cb7-74"></a>    <span class="at">lwd =</span> <span class="dv">2</span>,</span>
-<span id="cb7-75"><a href="#cb7-75"></a>    <span class="at">arr.pos =</span> <span class="fl">0.65</span>,</span>
-<span id="cb7-76"><a href="#cb7-76"></a>    <span class="at">arr.length =</span> <span class="fl">0.5</span></span>
-<span id="cb7-77"><a href="#cb7-77"></a>  )</span>
-<span id="cb7-78"><a href="#cb7-78"></a>}</span>
-<span id="cb7-79"><a href="#cb7-79"></a></span>
-<span id="cb7-80"><a href="#cb7-80"></a>purrr<span class="sc">::</span><span class="fu">walk</span>(</span>
-<span id="cb7-81"><a href="#cb7-81"></a>  <span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"I"</span>, <span class="st">"R"</span>),</span>
-<span id="cb7-82"><a href="#cb7-82"></a>  <span class="at">.f =</span> <span class="cf">function</span>(.x) {</span>
-<span id="cb7-83"><a href="#cb7-83"></a>    diagram<span class="sc">::</span><span class="fu">textrect</span>(</span>
-<span id="cb7-84"><a href="#cb7-84"></a>      elpos[.x, ],</span>
-<span id="cb7-85"><a href="#cb7-85"></a>      <span class="fl">0.08</span>,</span>
-<span id="cb7-86"><a href="#cb7-86"></a>      <span class="fl">0.10</span>,</span>
-<span id="cb7-87"><a href="#cb7-87"></a>      <span class="at">lab =</span> .x,</span>
-<span id="cb7-88"><a href="#cb7-88"></a>      <span class="at">box.col =</span> <span class="fu">gray</span>(<span class="fl">0.7</span>),</span>
-<span id="cb7-89"><a href="#cb7-89"></a>      <span class="at">shadow.col =</span> <span class="fu">gray</span>(<span class="fl">0.4</span>),</span>
-<span id="cb7-90"><a href="#cb7-90"></a>      <span class="at">shadow.size =</span> <span class="fl">0.01</span>,</span>
-<span id="cb7-91"><a href="#cb7-91"></a>      <span class="at">cex =</span> <span class="dv">2</span></span>
-<span id="cb7-92"><a href="#cb7-92"></a>    )</span>
-<span id="cb7-93"><a href="#cb7-93"></a>  }</span>
-<span id="cb7-94"><a href="#cb7-94"></a>)</span>
-<span id="cb7-95"><a href="#cb7-95"></a></span>
-<span id="cb7-96"><a href="#cb7-96"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"I"</span>), <span class="dv">1</span>]), <span class="fl">0.62</span>, <span class="fu">expression</span>(lambda), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb7-97"><a href="#cb7-97"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"R"</span>), <span class="dv">1</span>]), <span class="fl">0.62</span>, <span class="fu">expression</span>(gamma), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb7-98"><a href="#cb7-98"></a></span>
-<span id="cb7-99"><a href="#cb7-99"></a><span class="fu">par</span>(op)</span>
-<span id="cb7-100"><a href="#cb7-100"></a><span class="in">```</span></span>
-<span id="cb7-101"><a href="#cb7-101"></a></span>
-<span id="cb7-102"><a href="#cb7-102"></a>For the standard SIR model, infection moves people from $S$ to $I$ at rate $\lambda$, and recovery or removal moves people from $I$ to $R$ at rate $\gamma$.</span>
-<span id="cb7-103"><a href="#cb7-103"></a></span>
-<span id="cb7-104"><a href="#cb7-104"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"exercise"</span><span class="dt">&gt;</span></span>
-<span id="cb7-105"><a href="#cb7-105"></a></span>
-<span id="cb7-106"><a href="#cb7-106"></a><span class="fu">### Exercise 1: Choose one intervention or modeling feature that your group wants to represent. Then change the SIR diagram to include it.</span></span>
-<span id="cb7-107"><a href="#cb7-107"></a></span>
-<span id="cb7-108"><a href="#cb7-108"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb7-109"><a href="#cb7-109"></a></span>
-<span id="cb7-110"><a href="#cb7-110"></a>Examples include:</span>
-<span id="cb7-111"><a href="#cb7-111"></a></span>
-<span id="cb7-112"><a href="#cb7-112"></a><span class="ss">- </span>vaccination;</span>
-<span id="cb7-113"><a href="#cb7-113"></a><span class="ss">- </span>isolation or quarantine;</span>
-<span id="cb7-114"><a href="#cb7-114"></a><span class="ss">- </span>masking or behavior change;</span>
-<span id="cb7-115"><a href="#cb7-115"></a><span class="ss">- </span>waning immunity;</span>
-<span id="cb7-116"><a href="#cb7-116"></a><span class="ss">- </span>births and deaths;</span>
-<span id="cb7-117"><a href="#cb7-117"></a><span class="ss">- </span>treatment;</span>
-<span id="cb7-118"><a href="#cb7-118"></a><span class="ss">- </span>age groups or other risk groups; or</span>
-<span id="cb7-119"><a href="#cb7-119"></a><span class="ss">- </span>any intervention relevant to your own research area.</span>
-<span id="cb7-120"><a href="#cb7-120"></a></span>
-<span id="cb7-121"><a href="#cb7-121"></a>For your modified model, prepare a short explanation of:</span>
-<span id="cb7-122"><a href="#cb7-122"></a></span>
-<span id="cb7-123"><a href="#cb7-123"></a><span class="ss">1. </span>which compartments you added or removed;</span>
-<span id="cb7-124"><a href="#cb7-124"></a><span class="ss">2. </span>which arrows you added or removed;</span>
-<span id="cb7-125"><a href="#cb7-125"></a><span class="ss">3. </span>what parameter or rate each new arrow represents;</span>
-<span id="cb7-126"><a href="#cb7-126"></a><span class="ss">4. </span>what assumptions the new structure makes; and</span>
-<span id="cb7-127"><a href="#cb7-127"></a><span class="ss">5. </span>what qualitative effect you expect the intervention to have on the epidemic curve.</span>
-<span id="cb7-128"><a href="#cb7-128"></a></span>
-<span id="cb7-129"><a href="#cb7-129"></a><span class="fu">### Example: adding vaccination</span></span>
-<span id="cb7-130"><a href="#cb7-130"></a></span>
-<span id="cb7-131"><a href="#cb7-131"></a>One simple way to represent vaccination is to add a flow from $S$ to $R$.</span>
-<span id="cb7-132"><a href="#cb7-132"></a>This assumes vaccination gives protection similar to recovery or removal.</span>
-<span id="cb7-133"><a href="#cb7-133"></a>That is a strong assumption, but it is a useful starting point.</span>
-<span id="cb7-134"><a href="#cb7-134"></a></span>
-<span id="cb7-137"><a href="#cb7-137"></a><span class="in">```{r}</span></span>
-<span id="cb7-138"><a href="#cb7-138"></a><span class="co">#| echo: true</span></span>
-<span id="cb7-139"><a href="#cb7-139"></a><span class="co">#| column: body</span></span>
-<span id="cb7-140"><a href="#cb7-140"></a><span class="co">#| out-width: 80%</span></span>
-<span id="cb7-141"><a href="#cb7-141"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb7-142"><a href="#cb7-142"></a></span>
-<span id="cb7-143"><a href="#cb7-143"></a>elpos <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb7-144"><a href="#cb7-144"></a>  <span class="at">S =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
-<span id="cb7-145"><a href="#cb7-145"></a>  <span class="at">I =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>),</span>
-<span id="cb7-146"><a href="#cb7-146"></a>  <span class="at">R =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>)</span>
-<span id="cb7-147"><a href="#cb7-147"></a>)</span>
-<span id="cb7-148"><a href="#cb7-148"></a></span>
-<span id="cb7-149"><a href="#cb7-149"></a>elpos[, <span class="dv">1</span>] <span class="ot">&lt;-</span> (<span class="dv">2</span> <span class="sc">*</span> elpos[, <span class="dv">1</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">6</span></span>
-<span id="cb7-150"><a href="#cb7-150"></a>elpos[, <span class="dv">2</span>] <span class="ot">&lt;-</span> (<span class="dv">2</span> <span class="sc">*</span> elpos[, <span class="dv">2</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">4</span></span>
-<span id="cb7-151"><a href="#cb7-151"></a></span>
-<span id="cb7-152"><a href="#cb7-152"></a>fromto <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb7-153"><a href="#cb7-153"></a>  <span class="at">SI =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
-<span id="cb7-154"><a href="#cb7-154"></a>  <span class="at">IR =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>),</span>
-<span id="cb7-155"><a href="#cb7-155"></a>  <span class="at">SR =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>)</span>
-<span id="cb7-156"><a href="#cb7-156"></a>)</span>
-<span id="cb7-157"><a href="#cb7-157"></a></span>
-<span id="cb7-158"><a href="#cb7-158"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
-<span id="cb7-159"><a href="#cb7-159"></a>diagram<span class="sc">::</span><span class="fu">openplotmat</span>(<span class="at">asp =</span> <span class="fl">0.65</span>)</span>
-<span id="cb7-160"><a href="#cb7-160"></a></span>
-<span id="cb7-161"><a href="#cb7-161"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(fromto))) {</span>
-<span id="cb7-162"><a href="#cb7-162"></a>  diagram<span class="sc">::</span><span class="fu">straightarrow</span>(</span>
-<span id="cb7-163"><a href="#cb7-163"></a>    <span class="at">to =</span> elpos[fromto[i, <span class="dv">2</span>], ],</span>
-<span id="cb7-164"><a href="#cb7-164"></a>    <span class="at">from =</span> elpos[fromto[i, <span class="dv">1</span>], ],</span>
-<span id="cb7-165"><a href="#cb7-165"></a>    <span class="at">lwd =</span> <span class="dv">2</span>,</span>
-<span id="cb7-166"><a href="#cb7-166"></a>    <span class="at">arr.pos =</span> <span class="fl">0.65</span>,</span>
-<span id="cb7-167"><a href="#cb7-167"></a>    <span class="at">arr.length =</span> <span class="fl">0.5</span></span>
-<span id="cb7-168"><a href="#cb7-168"></a>  )</span>
-<span id="cb7-169"><a href="#cb7-169"></a>}</span>
-<span id="cb7-170"><a href="#cb7-170"></a></span>
-<span id="cb7-171"><a href="#cb7-171"></a>purrr<span class="sc">::</span><span class="fu">walk</span>(</span>
-<span id="cb7-172"><a href="#cb7-172"></a>  <span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"I"</span>, <span class="st">"R"</span>),</span>
-<span id="cb7-173"><a href="#cb7-173"></a>  <span class="at">.f =</span> <span class="cf">function</span>(.x) {</span>
-<span id="cb7-174"><a href="#cb7-174"></a>    diagram<span class="sc">::</span><span class="fu">textrect</span>(</span>
-<span id="cb7-175"><a href="#cb7-175"></a>      elpos[.x, ],</span>
-<span id="cb7-176"><a href="#cb7-176"></a>      <span class="fl">0.08</span>,</span>
-<span id="cb7-177"><a href="#cb7-177"></a>      <span class="fl">0.10</span>,</span>
-<span id="cb7-178"><a href="#cb7-178"></a>      <span class="at">lab =</span> .x,</span>
-<span id="cb7-179"><a href="#cb7-179"></a>      <span class="at">box.col =</span> <span class="fu">gray</span>(<span class="fl">0.7</span>),</span>
-<span id="cb7-180"><a href="#cb7-180"></a>      <span class="at">shadow.col =</span> <span class="fu">gray</span>(<span class="fl">0.4</span>),</span>
-<span id="cb7-181"><a href="#cb7-181"></a>      <span class="at">shadow.size =</span> <span class="fl">0.01</span>,</span>
-<span id="cb7-182"><a href="#cb7-182"></a>      <span class="at">cex =</span> <span class="dv">2</span></span>
-<span id="cb7-183"><a href="#cb7-183"></a>    )</span>
-<span id="cb7-184"><a href="#cb7-184"></a>  }</span>
-<span id="cb7-185"><a href="#cb7-185"></a>)</span>
-<span id="cb7-186"><a href="#cb7-186"></a></span>
-<span id="cb7-187"><a href="#cb7-187"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"I"</span>), <span class="dv">1</span>]), <span class="fl">0.86</span>, <span class="fu">expression</span>(lambda), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb7-188"><a href="#cb7-188"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"R"</span>), <span class="dv">1</span>]) <span class="sc">+</span> <span class="fl">0.04</span>, <span class="fl">0.47</span>, <span class="fu">expression</span>(gamma), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb7-189"><a href="#cb7-189"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"R"</span>), <span class="dv">1</span>]) <span class="sc">-</span> <span class="fl">0.04</span>, <span class="fl">0.47</span>, <span class="fu">expression</span>(v), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb7-190"><a href="#cb7-190"></a></span>
-<span id="cb7-191"><a href="#cb7-191"></a><span class="fu">par</span>(op)</span>
-<span id="cb7-192"><a href="#cb7-192"></a><span class="in">```</span></span>
-<span id="cb7-193"><a href="#cb7-193"></a></span>
-<span id="cb7-194"><a href="#cb7-194"></a>In this example, $v$ is the vaccination rate.</span>
-<span id="cb7-195"><a href="#cb7-195"></a>Before writing equations, ask what this diagram assumes.</span>
-<span id="cb7-196"><a href="#cb7-196"></a>For example, does vaccination work immediately?</span>
-<span id="cb7-197"><a href="#cb7-197"></a>Does everyone have the same access to vaccination?</span>
-<span id="cb7-198"><a href="#cb7-198"></a>Is vaccine protection perfect?</span>
-<span id="cb7-199"><a href="#cb7-199"></a>Does protection wane?</span>
-<span id="cb7-200"><a href="#cb7-200"></a></span>
-<span id="cb7-201"><a href="#cb7-201"></a><span class="fu">## Template for your diagram</span></span>
-<span id="cb7-202"><a href="#cb7-202"></a></span>
-<span id="cb7-203"><a href="#cb7-203"></a>You can copy and modify this code chunk to make your own diagram.</span>
-<span id="cb7-204"><a href="#cb7-204"></a>Add compartments to <span class="in">`elpos`</span>, add arrows to <span class="in">`fromto`</span>, and label any new rates.</span>
-<span id="cb7-205"><a href="#cb7-205"></a></span>
-<span id="cb7-208"><a href="#cb7-208"></a><span class="in">```{r}</span></span>
-<span id="cb7-209"><a href="#cb7-209"></a><span class="co">#| eval: false</span></span>
-<span id="cb7-210"><a href="#cb7-210"></a></span>
-<span id="cb7-211"><a href="#cb7-211"></a><span class="co"># Define the locations of each compartment.</span></span>
-<span id="cb7-212"><a href="#cb7-212"></a><span class="co"># Each row is one compartment, and the two numbers give its x- and</span></span>
-<span id="cb7-213"><a href="#cb7-213"></a><span class="co"># y-position before scaling.</span></span>
-<span id="cb7-214"><a href="#cb7-214"></a>elpos <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb7-215"><a href="#cb7-215"></a>  <span class="at">S =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>),</span>
-<span id="cb7-216"><a href="#cb7-216"></a>  <span class="at">I =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>),</span>
-<span id="cb7-217"><a href="#cb7-217"></a>  <span class="at">R =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>)</span>
-<span id="cb7-218"><a href="#cb7-218"></a>)</span>
-<span id="cb7-219"><a href="#cb7-219"></a></span>
-<span id="cb7-220"><a href="#cb7-220"></a><span class="co"># Rescale the compartment positions so they fit inside the plotting area.</span></span>
-<span id="cb7-221"><a href="#cb7-221"></a>elpos[, <span class="dv">1</span>] <span class="ot">&lt;-</span> (<span class="dv">2</span> <span class="sc">*</span> elpos[, <span class="dv">1</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">6</span></span>
-<span id="cb7-222"><a href="#cb7-222"></a>elpos[, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
-<span id="cb7-223"><a href="#cb7-223"></a></span>
-<span id="cb7-224"><a href="#cb7-224"></a><span class="co"># Define the arrows between compartments.</span></span>
-<span id="cb7-225"><a href="#cb7-225"></a><span class="co"># The numbers refer to row positions in elpos, so SI = c(1, 2) draws an</span></span>
-<span id="cb7-226"><a href="#cb7-226"></a><span class="co"># arrow from the first row, S, to the second row, I.</span></span>
-<span id="cb7-227"><a href="#cb7-227"></a>fromto <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb7-228"><a href="#cb7-228"></a>  <span class="at">SI =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
-<span id="cb7-229"><a href="#cb7-229"></a>  <span class="at">IR =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb7-230"><a href="#cb7-230"></a>)</span>
-<span id="cb7-231"><a href="#cb7-231"></a></span>
-<span id="cb7-232"><a href="#cb7-232"></a><span class="co"># Set small plot margins and open a blank plotting area for the diagram.</span></span>
-<span id="cb7-233"><a href="#cb7-233"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
-<span id="cb7-234"><a href="#cb7-234"></a>diagram<span class="sc">::</span><span class="fu">openplotmat</span>(<span class="at">asp =</span> <span class="fl">0.35</span>)</span>
-<span id="cb7-235"><a href="#cb7-235"></a></span>
-<span id="cb7-236"><a href="#cb7-236"></a><span class="co"># Draw one arrow for each row in fromto.</span></span>
-<span id="cb7-237"><a href="#cb7-237"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(fromto))) {</span>
-<span id="cb7-238"><a href="#cb7-238"></a>  diagram<span class="sc">::</span><span class="fu">straightarrow</span>(</span>
-<span id="cb7-239"><a href="#cb7-239"></a>    <span class="at">to =</span> elpos[fromto[i, <span class="dv">2</span>], ],</span>
-<span id="cb7-240"><a href="#cb7-240"></a>    <span class="at">from =</span> elpos[fromto[i, <span class="dv">1</span>], ],</span>
-<span id="cb7-241"><a href="#cb7-241"></a>    <span class="at">lwd =</span> <span class="dv">2</span>,</span>
-<span id="cb7-242"><a href="#cb7-242"></a>    <span class="at">arr.pos =</span> <span class="fl">0.65</span>,</span>
-<span id="cb7-243"><a href="#cb7-243"></a>    <span class="at">arr.length =</span> <span class="fl">0.5</span></span>
-<span id="cb7-244"><a href="#cb7-244"></a>  )</span>
-<span id="cb7-245"><a href="#cb7-245"></a>}</span>
-<span id="cb7-246"><a href="#cb7-246"></a></span>
-<span id="cb7-247"><a href="#cb7-247"></a><span class="co"># Draw a labeled box for each compartment.</span></span>
-<span id="cb7-248"><a href="#cb7-248"></a>purrr<span class="sc">::</span><span class="fu">walk</span>(</span>
-<span id="cb7-249"><a href="#cb7-249"></a>  <span class="fu">rownames</span>(elpos),</span>
-<span id="cb7-250"><a href="#cb7-250"></a>  <span class="at">.f =</span> <span class="cf">function</span>(.x) {</span>
-<span id="cb7-251"><a href="#cb7-251"></a>    diagram<span class="sc">::</span><span class="fu">textrect</span>(</span>
-<span id="cb7-252"><a href="#cb7-252"></a>      elpos[.x, ],</span>
-<span id="cb7-253"><a href="#cb7-253"></a>      <span class="fl">0.08</span>,</span>
-<span id="cb7-254"><a href="#cb7-254"></a>      <span class="fl">0.10</span>,</span>
-<span id="cb7-255"><a href="#cb7-255"></a>      <span class="at">lab =</span> .x,</span>
-<span id="cb7-256"><a href="#cb7-256"></a>      <span class="at">box.col =</span> <span class="fu">gray</span>(<span class="fl">0.7</span>),</span>
-<span id="cb7-257"><a href="#cb7-257"></a>      <span class="at">shadow.col =</span> <span class="fu">gray</span>(<span class="fl">0.4</span>),</span>
-<span id="cb7-258"><a href="#cb7-258"></a>      <span class="at">shadow.size =</span> <span class="fl">0.01</span>,</span>
-<span id="cb7-259"><a href="#cb7-259"></a>      <span class="at">cex =</span> <span class="dv">2</span></span>
-<span id="cb7-260"><a href="#cb7-260"></a>    )</span>
-<span id="cb7-261"><a href="#cb7-261"></a>  }</span>
-<span id="cb7-262"><a href="#cb7-262"></a>)</span>
-<span id="cb7-263"><a href="#cb7-263"></a></span>
-<span id="cb7-264"><a href="#cb7-264"></a><span class="co"># Label the arrows with the rates that move individuals between states.</span></span>
-<span id="cb7-265"><a href="#cb7-265"></a><span class="co"># Adjust the x- and y-positions if you add new compartments or arrows.</span></span>
-<span id="cb7-266"><a href="#cb7-266"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"I"</span>), <span class="dv">1</span>]), <span class="fl">0.62</span>, <span class="fu">expression</span>(lambda), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb7-267"><a href="#cb7-267"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"R"</span>), <span class="dv">1</span>]), <span class="fl">0.62</span>, <span class="fu">expression</span>(gamma), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb7-268"><a href="#cb7-268"></a></span>
-<span id="cb7-269"><a href="#cb7-269"></a><span class="co"># Restore the previous plotting settings.</span></span>
-<span id="cb7-270"><a href="#cb7-270"></a><span class="fu">par</span>(op)</span>
-<span id="cb7-271"><a href="#cb7-271"></a><span class="in">```</span></span>
-<span id="cb7-272"><a href="#cb7-272"></a></span>
-<span id="cb7-273"><a href="#cb7-273"></a><span class="fu">## Deliverables</span></span>
-<span id="cb7-274"><a href="#cb7-274"></a></span>
-<span id="cb7-275"><a href="#cb7-275"></a>By the end of the exercise you should be able to share:</span>
-<span id="cb7-276"><a href="#cb7-276"></a></span>
-<span id="cb7-277"><a href="#cb7-277"></a><span class="ss">- </span>one modified box-and-arrow diagram;</span>
-<span id="cb7-278"><a href="#cb7-278"></a><span class="ss">- </span>a list of the model states;</span>
-<span id="cb7-279"><a href="#cb7-279"></a><span class="ss">- </span>a list of the model flows and parameters;</span>
-<span id="cb7-280"><a href="#cb7-280"></a><span class="ss">- </span>one or two key assumptions implied by the diagram; and</span>
-<span id="cb7-281"><a href="#cb7-281"></a><span class="ss">- </span>one prediction for how the intervention changes the epidemic trajectory.</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false" data-code-line-numbers=""><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="an">title:</span><span class="co"> "Compartmental Diagram Interactive Session"</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="an">execute:</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">    echo: true</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">    warning: false</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="an">editor:</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">  markdown:</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">    wrap: sentence</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="an">metadata-files:</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co">    - metadata/matthewferrari.yml</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="co">---</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a></span>
+<span id="cb4-13"><a href="#cb4-13"></a>In this session, you will start with a simple SIR model diagram and modify it to represent an intervention or transmission process that is interesting to your group.</span>
+<span id="cb4-14"><a href="#cb4-14"></a>The goal is not to make the most complicated model possible.</span>
+<span id="cb4-15"><a href="#cb4-15"></a>Instead, the goal is to make each modeling choice explicit: what compartments are needed, what flows connect them, and what assumptions those flows imply.</span>
+<span id="cb4-16"><a href="#cb4-16"></a></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="fu">## Learning goals</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a></span>
+<span id="cb4-19"><a href="#cb4-19"></a>By the end of this session, you should be able to:</span>
+<span id="cb4-20"><a href="#cb4-20"></a></span>
+<span id="cb4-21"><a href="#cb4-21"></a><span class="ss">1. </span>understand how to translate a public-health intervention into a compartment model structure;</span>
+<span id="cb4-22"><a href="#cb4-22"></a><span class="ss">2. </span>identify the states, flows, and parameters in that structure;</span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="ss">3. </span>explain which assumptions are introduced by adding or removing arrows; and</span>
+<span id="cb4-24"><a href="#cb4-24"></a><span class="ss">4. </span>describe the expected qualitative effect of the intervention on epidemic dynamics.</span>
+<span id="cb4-25"><a href="#cb4-25"></a></span>
+<span id="cb4-26"><a href="#cb4-26"></a><span class="fu">## Setup</span></span>
+<span id="cb4-27"><a href="#cb4-27"></a></span>
+<span id="cb4-28"><a href="#cb4-28"></a>We will use the <span class="in">`diagram`</span> package to draw box-and-arrow compartment diagrams, as in <span class="co">[</span><span class="ot">R Session 02</span><span class="co">](./r-session-02.qmd)</span>, and the <span class="in">`purrr`</span> package to create uniform compartment boxes.</span>
+<span id="cb4-29"><a href="#cb4-29"></a></span>
+<span id="cb4-32"><a href="#cb4-32"></a><span class="in">```{r}</span></span>
+<span id="cb4-33"><a href="#cb4-33"></a><span class="fu">library</span>(diagram)</span>
+<span id="cb4-34"><a href="#cb4-34"></a><span class="fu">library</span>(purrr)</span>
+<span id="cb4-35"><a href="#cb4-35"></a><span class="in">```</span></span>
+<span id="cb4-36"><a href="#cb4-36"></a></span>
+<span id="cb4-37"><a href="#cb4-37"></a><span class="fu">## Starting point: a simple SIR diagram</span></span>
+<span id="cb4-38"><a href="#cb4-38"></a></span>
+<span id="cb4-39"><a href="#cb4-39"></a>The basic SIR model has three compartments:</span>
+<span id="cb4-40"><a href="#cb4-40"></a></span>
+<span id="cb4-41"><a href="#cb4-41"></a><span class="ss">- </span>$S$: susceptible individuals;</span>
+<span id="cb4-42"><a href="#cb4-42"></a><span class="ss">- </span>$I$: infectious individuals; and</span>
+<span id="cb4-43"><a href="#cb4-43"></a><span class="ss">- </span>$R$: recovered or removed individuals.</span>
+<span id="cb4-44"><a href="#cb4-44"></a></span>
+<span id="cb4-47"><a href="#cb4-47"></a><span class="in">```{r}</span></span>
+<span id="cb4-48"><a href="#cb4-48"></a><span class="co">#| echo: true</span></span>
+<span id="cb4-49"><a href="#cb4-49"></a><span class="co">#| column: body</span></span>
+<span id="cb4-50"><a href="#cb4-50"></a><span class="co">#| out-width: 80%</span></span>
+<span id="cb4-51"><a href="#cb4-51"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb4-52"><a href="#cb4-52"></a></span>
+<span id="cb4-53"><a href="#cb4-53"></a>elpos <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb4-54"><a href="#cb4-54"></a>  <span class="at">S =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb4-55"><a href="#cb4-55"></a>  <span class="at">I =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>),</span>
+<span id="cb4-56"><a href="#cb4-56"></a>  <span class="at">R =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>)</span>
+<span id="cb4-57"><a href="#cb4-57"></a>)</span>
+<span id="cb4-58"><a href="#cb4-58"></a></span>
+<span id="cb4-59"><a href="#cb4-59"></a>elpos[, <span class="dv">1</span>] <span class="ot">&lt;-</span> (<span class="dv">2</span> <span class="sc">*</span> elpos[, <span class="dv">1</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">6</span></span>
+<span id="cb4-60"><a href="#cb4-60"></a>elpos[, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb4-61"><a href="#cb4-61"></a></span>
+<span id="cb4-62"><a href="#cb4-62"></a>fromto <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb4-63"><a href="#cb4-63"></a>  <span class="at">SI =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
+<span id="cb4-64"><a href="#cb4-64"></a>  <span class="at">IR =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb4-65"><a href="#cb4-65"></a>)</span>
+<span id="cb4-66"><a href="#cb4-66"></a></span>
+<span id="cb4-67"><a href="#cb4-67"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb4-68"><a href="#cb4-68"></a>diagram<span class="sc">::</span><span class="fu">openplotmat</span>(<span class="at">asp =</span> <span class="fl">0.35</span>)</span>
+<span id="cb4-69"><a href="#cb4-69"></a></span>
+<span id="cb4-70"><a href="#cb4-70"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(fromto))) {</span>
+<span id="cb4-71"><a href="#cb4-71"></a>  diagram<span class="sc">::</span><span class="fu">straightarrow</span>(</span>
+<span id="cb4-72"><a href="#cb4-72"></a>    <span class="at">to =</span> elpos[fromto[i, <span class="dv">2</span>], ],</span>
+<span id="cb4-73"><a href="#cb4-73"></a>    <span class="at">from =</span> elpos[fromto[i, <span class="dv">1</span>], ],</span>
+<span id="cb4-74"><a href="#cb4-74"></a>    <span class="at">lwd =</span> <span class="dv">2</span>,</span>
+<span id="cb4-75"><a href="#cb4-75"></a>    <span class="at">arr.pos =</span> <span class="fl">0.65</span>,</span>
+<span id="cb4-76"><a href="#cb4-76"></a>    <span class="at">arr.length =</span> <span class="fl">0.5</span></span>
+<span id="cb4-77"><a href="#cb4-77"></a>  )</span>
+<span id="cb4-78"><a href="#cb4-78"></a>}</span>
+<span id="cb4-79"><a href="#cb4-79"></a></span>
+<span id="cb4-80"><a href="#cb4-80"></a>purrr<span class="sc">::</span><span class="fu">walk</span>(</span>
+<span id="cb4-81"><a href="#cb4-81"></a>  <span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"I"</span>, <span class="st">"R"</span>),</span>
+<span id="cb4-82"><a href="#cb4-82"></a>  <span class="at">.f =</span> <span class="cf">function</span>(.x) {</span>
+<span id="cb4-83"><a href="#cb4-83"></a>    diagram<span class="sc">::</span><span class="fu">textrect</span>(</span>
+<span id="cb4-84"><a href="#cb4-84"></a>      elpos[.x, ],</span>
+<span id="cb4-85"><a href="#cb4-85"></a>      <span class="fl">0.08</span>,</span>
+<span id="cb4-86"><a href="#cb4-86"></a>      <span class="fl">0.10</span>,</span>
+<span id="cb4-87"><a href="#cb4-87"></a>      <span class="at">lab =</span> .x,</span>
+<span id="cb4-88"><a href="#cb4-88"></a>      <span class="at">box.col =</span> <span class="fu">gray</span>(<span class="fl">0.7</span>),</span>
+<span id="cb4-89"><a href="#cb4-89"></a>      <span class="at">shadow.col =</span> <span class="fu">gray</span>(<span class="fl">0.4</span>),</span>
+<span id="cb4-90"><a href="#cb4-90"></a>      <span class="at">shadow.size =</span> <span class="fl">0.01</span>,</span>
+<span id="cb4-91"><a href="#cb4-91"></a>      <span class="at">cex =</span> <span class="dv">2</span></span>
+<span id="cb4-92"><a href="#cb4-92"></a>    )</span>
+<span id="cb4-93"><a href="#cb4-93"></a>  }</span>
+<span id="cb4-94"><a href="#cb4-94"></a>)</span>
+<span id="cb4-95"><a href="#cb4-95"></a></span>
+<span id="cb4-96"><a href="#cb4-96"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"I"</span>), <span class="dv">1</span>]), <span class="fl">0.62</span>, <span class="fu">expression</span>(lambda), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
+<span id="cb4-97"><a href="#cb4-97"></a><span class="fu">text</span>(<span class="fu">mean</span>(elpos[<span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"R"</span>), <span class="dv">1</span>]), <span class="fl">0.62</span>, <span class="fu">expression</span>(gamma), <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
+<span id="cb4-98"><a href="#cb4-98"></a></span>
+<span id="cb4-99"><a href="#cb4-99"></a><span class="fu">par</span>(op)</span>
+<span id="cb4-100"><a href="#cb4-100"></a><span class="in">```</span></span>
+<span id="cb4-101"><a href="#cb4-101"></a></span>
+<span id="cb4-102"><a href="#cb4-102"></a>For the standard SIR model, infection moves people from $S$ to $I$ at rate $\lambda$, and recovery or removal moves people from $I$ to $R$ at rate $\gamma$.</span>
+<span id="cb4-103"><a href="#cb4-103"></a></span>
+<span id="cb4-104"><a href="#cb4-104"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"exercise"</span><span class="dt">&gt;</span></span>
+<span id="cb4-105"><a href="#cb4-105"></a></span>
+<span id="cb4-106"><a href="#cb4-106"></a><span class="fu">### Exercise 1: Choose one intervention or modeling feature that your group wants to represent. Then change the SIR diagram to include it.</span></span>
+<span id="cb4-107"><a href="#cb4-107"></a></span>
+<span id="cb4-108"><a href="#cb4-108"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/arnold-c/SISMID-Module-02_2026/edit/main/day-1-interactive-session.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer><script src="site_libs/quarto-contrib/line-highlight-1.0.0/line-highlight.js" defer="true"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/arnold-c/SISMID-Module-01_2026/edit/main/day-1-interactive-session.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer><script src="site_libs/quarto-contrib/line-highlight-1.0.0/line-highlight.js" defer="true"></script>
 </body></html>
