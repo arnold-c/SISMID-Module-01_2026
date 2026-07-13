@@ -1230,7 +1230,7 @@ To develop some intuition about the relationship between $R_0$ and the mean age 
 We will assume that the population is completely susceptible and that the force of infection is constant.
 We'll also assume that there is heterogenous mixing i.e. no age structure.
 
-As we've seen in [Matt's lecture on age structure](L05_age-structure.qmd), we can calculate the mean age of infection using the equation below:
+As we've seen in [Matt's lecture on age structure](L04_age-structure.qmd), we can calculate the mean age of infection using the equation below:
 
 $$
 A \approx \frac{L}{R_E - 1}
