@@ -11,4 +11,4 @@ metadata-files:
 <iframe class="slide-deck" src="https://docs.google.com/presentation/d/e/2PACX-1vTNiGpw-dPKzfZT-X7ilwzyj2juE5EQIxEJWuiPJKZx-Zj6TUhBvqfWqpG8g1D34w/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1023" height="606" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 ```
 
-[Download slides as PDF](https://docs.google.com/presentation/d/15QGCYphvxdM_Xvxnlvza2tYfExblFLz5/export/pdf){target="_blank"}
+[Download slides as PDF](./slides/L05_Parameter-estimation.pptx.pdf)

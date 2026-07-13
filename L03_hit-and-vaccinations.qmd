@@ -11,4 +11,4 @@ metadata-files:
 <iframe class="slide-deck" src="https://docs.google.com/presentation/d/e/2PACX-1vTGE689-psnW9PEeNh7Agi_6QCqYbL8STqPN1PLzdHABYS2E40LF5vNipdNrpJQng/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1023" height="606" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 ```
 
-[Download slides as PDF](https://docs.google.com/presentation/d/1906a4BAaoVKparsdhAl6CMuBVsPaBif4/export/pdf){target="_blank"}
+[Download slides as PDF](./slides/L03_Herd-immunity-vaccination.pptx.pdf)

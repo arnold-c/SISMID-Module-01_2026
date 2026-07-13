@@ -11,4 +11,4 @@ metadata-files:
 <iframe class="slide-deck" src="https://docs.google.com/presentation/d/e/2PACX-1vRGx4xBxcrXVv9unCfn1m-n6q8wFaaXkYCEUNnIELCF7dS0R1RYviGrwwJv30IMww/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1023" height="606" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 ```
 
-[Download slides as PDF](https://docs.google.com/presentation/d/1hnNnH8a5d0BUJJnB2QJrh1OWnWvtgfRA/export/pdf){target="_blank"}
+[Download slides as PDF](./slides/L04_Age-structure.pptx.pdf)

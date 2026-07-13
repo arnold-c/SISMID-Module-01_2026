@@ -11,4 +11,4 @@ metadata-files:
 <iframe class="slide-deck" src="https://docs.google.com/presentation/d/e/2PACX-1vRsVU6jPmYp8uQIVz10tU_B21j5RcEhBN-95kHab_mBetGr3Yk72tyjmm--0Ca7kQ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1023" height="606" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 ```
 
-[Download slides as PDF](https://docs.google.com/presentation/d/1BzSu4gUdHWq_LrFt5OBvH-Lqw9uXGU77/export/pdf){target="_blank"}
+[Download slides as PDF](./slides/L01_Intro-to-modeling.pptx.pdf)
